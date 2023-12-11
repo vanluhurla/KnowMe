@@ -9,13 +9,29 @@
 /* Begin PBXBuildFile section */
 		03D1390D2B27447B00248EB6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03D1390C2B27447B00248EB6 /* AppDelegate.swift */; };
 		03D1390F2B27447B00248EB6 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03D1390E2B27447B00248EB6 /* SceneDelegate.swift */; };
-		03D139112B27447B00248EB6 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03D139102B27447B00248EB6 /* ViewController.swift */; };
-		03D139142B27447B00248EB6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 03D139122B27447B00248EB6 /* Main.storyboard */; };
 		03D139162B27447D00248EB6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 03D139152B27447D00248EB6 /* Assets.xcassets */; };
 		03D139192B27447D00248EB6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 03D139172B27447D00248EB6 /* LaunchScreen.storyboard */; };
 		03D139242B27447D00248EB6 /* KnowMeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03D139232B27447D00248EB6 /* KnowMeTests.swift */; };
 		03D1392E2B27447D00248EB6 /* KnowMeUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03D1392D2B27447D00248EB6 /* KnowMeUITests.swift */; };
 		03D139302B27447D00248EB6 /* KnowMeUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03D1392F2B27447D00248EB6 /* KnowMeUITestsLaunchTests.swift */; };
+		03D1393E2B274A5900248EB6 /* KMMainCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03D1393D2B274A5900248EB6 /* KMMainCoordinator.swift */; };
+		03D139412B274AAA00248EB6 /* KMViewControllerFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03D139402B274AAA00248EB6 /* KMViewControllerFactory.swift */; };
+		03D139472B274DD600248EB6 /* KMTabController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03D139462B274DD600248EB6 /* KMTabController.swift */; };
+		03D139492B27560100248EB6 /* KMProfileCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03D139482B27560100248EB6 /* KMProfileCoordinator.swift */; };
+		03D1394B2B27562200248EB6 /* KMJourneyCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03D1394A2B27562200248EB6 /* KMJourneyCoordinator.swift */; };
+		03D1394D2B27563900248EB6 /* KMEducationCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03D1394C2B27563900248EB6 /* KMEducationCoordinator.swift */; };
+		03D1394F2B27564F00248EB6 /* KMSkillsCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03D1394E2B27564F00248EB6 /* KMSkillsCoordinator.swift */; };
+		03D139512B27567200248EB6 /* KMHobbiesCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03D139502B27567200248EB6 /* KMHobbiesCoordinator.swift */; };
+		03D139582B27573B00248EB6 /* KMProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03D139572B27573B00248EB6 /* KMProfileViewController.swift */; };
+		03D1395A2B27575300248EB6 /* KMProfileViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03D139592B27575300248EB6 /* KMProfileViewModel.swift */; };
+		03D1395C2B27576600248EB6 /* KMJourneyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03D1395B2B27576600248EB6 /* KMJourneyViewController.swift */; };
+		03D1395E2B27578000248EB6 /* KMJourneyViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03D1395D2B27578000248EB6 /* KMJourneyViewModel.swift */; };
+		03D139602B27579100248EB6 /* KMEducationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03D1395F2B27579100248EB6 /* KMEducationViewController.swift */; };
+		03D139622B27579E00248EB6 /* KMEducationViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03D139612B27579E00248EB6 /* KMEducationViewModel.swift */; };
+		03D139642B2757BA00248EB6 /* KMSkillsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03D139632B2757BA00248EB6 /* KMSkillsViewController.swift */; };
+		03D139662B2757CB00248EB6 /* KMSkillsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03D139652B2757CB00248EB6 /* KMSkillsViewModel.swift */; };
+		03D139682B2757DC00248EB6 /* KMHobbiesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03D139672B2757DC00248EB6 /* KMHobbiesViewController.swift */; };
+		03D1396A2B2757ED00248EB6 /* KMHobbiesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03D139692B2757ED00248EB6 /* KMHobbiesViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -39,8 +55,6 @@
 		03D139092B27447B00248EB6 /* KnowMe.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = KnowMe.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		03D1390C2B27447B00248EB6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		03D1390E2B27447B00248EB6 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		03D139102B27447B00248EB6 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		03D139132B27447B00248EB6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		03D139152B27447D00248EB6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		03D139182B27447D00248EB6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		03D1391A2B27447D00248EB6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -49,6 +63,24 @@
 		03D139292B27447D00248EB6 /* KnowMeUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = KnowMeUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		03D1392D2B27447D00248EB6 /* KnowMeUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KnowMeUITests.swift; sourceTree = "<group>"; };
 		03D1392F2B27447D00248EB6 /* KnowMeUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KnowMeUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		03D1393D2B274A5900248EB6 /* KMMainCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KMMainCoordinator.swift; sourceTree = "<group>"; };
+		03D139402B274AAA00248EB6 /* KMViewControllerFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KMViewControllerFactory.swift; sourceTree = "<group>"; };
+		03D139462B274DD600248EB6 /* KMTabController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KMTabController.swift; sourceTree = "<group>"; };
+		03D139482B27560100248EB6 /* KMProfileCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KMProfileCoordinator.swift; sourceTree = "<group>"; };
+		03D1394A2B27562200248EB6 /* KMJourneyCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KMJourneyCoordinator.swift; sourceTree = "<group>"; };
+		03D1394C2B27563900248EB6 /* KMEducationCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KMEducationCoordinator.swift; sourceTree = "<group>"; };
+		03D1394E2B27564F00248EB6 /* KMSkillsCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KMSkillsCoordinator.swift; sourceTree = "<group>"; };
+		03D139502B27567200248EB6 /* KMHobbiesCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KMHobbiesCoordinator.swift; sourceTree = "<group>"; };
+		03D139572B27573B00248EB6 /* KMProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KMProfileViewController.swift; sourceTree = "<group>"; };
+		03D139592B27575300248EB6 /* KMProfileViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KMProfileViewModel.swift; sourceTree = "<group>"; };
+		03D1395B2B27576600248EB6 /* KMJourneyViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KMJourneyViewController.swift; sourceTree = "<group>"; };
+		03D1395D2B27578000248EB6 /* KMJourneyViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KMJourneyViewModel.swift; sourceTree = "<group>"; };
+		03D1395F2B27579100248EB6 /* KMEducationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KMEducationViewController.swift; sourceTree = "<group>"; };
+		03D139612B27579E00248EB6 /* KMEducationViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KMEducationViewModel.swift; sourceTree = "<group>"; };
+		03D139632B2757BA00248EB6 /* KMSkillsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KMSkillsViewController.swift; sourceTree = "<group>"; };
+		03D139652B2757CB00248EB6 /* KMSkillsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KMSkillsViewModel.swift; sourceTree = "<group>"; };
+		03D139672B2757DC00248EB6 /* KMHobbiesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KMHobbiesViewController.swift; sourceTree = "<group>"; };
+		03D139692B2757ED00248EB6 /* KMHobbiesViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KMHobbiesViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,10 +131,10 @@
 		03D1390B2B27447B00248EB6 /* KnowMe */ = {
 			isa = PBXGroup;
 			children = (
+				03D1393C2B274A2B00248EB6 /* Coordinator */,
+				03D139422B274D8200248EB6 /* View */,
 				03D1390C2B27447B00248EB6 /* AppDelegate.swift */,
 				03D1390E2B27447B00248EB6 /* SceneDelegate.swift */,
-				03D139102B27447B00248EB6 /* ViewController.swift */,
-				03D139122B27447B00248EB6 /* Main.storyboard */,
 				03D139152B27447D00248EB6 /* Assets.xcassets */,
 				03D139172B27447D00248EB6 /* LaunchScreen.storyboard */,
 				03D1391A2B27447D00248EB6 /* Info.plist */,
@@ -125,6 +157,94 @@
 				03D1392F2B27447D00248EB6 /* KnowMeUITestsLaunchTests.swift */,
 			);
 			path = KnowMeUITests;
+			sourceTree = "<group>";
+		};
+		03D1393C2B274A2B00248EB6 /* Coordinator */ = {
+			isa = PBXGroup;
+			children = (
+				03D1393D2B274A5900248EB6 /* KMMainCoordinator.swift */,
+				03D139482B27560100248EB6 /* KMProfileCoordinator.swift */,
+				03D1394A2B27562200248EB6 /* KMJourneyCoordinator.swift */,
+				03D1394C2B27563900248EB6 /* KMEducationCoordinator.swift */,
+				03D1394E2B27564F00248EB6 /* KMSkillsCoordinator.swift */,
+				03D139502B27567200248EB6 /* KMHobbiesCoordinator.swift */,
+				03D1393F2B274A6B00248EB6 /* Factory */,
+			);
+			path = Coordinator;
+			sourceTree = "<group>";
+		};
+		03D1393F2B274A6B00248EB6 /* Factory */ = {
+			isa = PBXGroup;
+			children = (
+				03D139402B274AAA00248EB6 /* KMViewControllerFactory.swift */,
+			);
+			path = Factory;
+			sourceTree = "<group>";
+		};
+		03D139422B274D8200248EB6 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				03D139452B274DBA00248EB6 /* TabBar */,
+				03D139522B2756D100248EB6 /* Profile */,
+				03D139532B2756DF00248EB6 /* Journey */,
+				03D139542B2756E900248EB6 /* Education */,
+				03D139552B2756F100248EB6 /* Skills */,
+				03D139562B2756FA00248EB6 /* Hobbies */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		03D139452B274DBA00248EB6 /* TabBar */ = {
+			isa = PBXGroup;
+			children = (
+				03D139462B274DD600248EB6 /* KMTabController.swift */,
+			);
+			path = TabBar;
+			sourceTree = "<group>";
+		};
+		03D139522B2756D100248EB6 /* Profile */ = {
+			isa = PBXGroup;
+			children = (
+				03D139592B27575300248EB6 /* KMProfileViewModel.swift */,
+				03D139572B27573B00248EB6 /* KMProfileViewController.swift */,
+			);
+			path = Profile;
+			sourceTree = "<group>";
+		};
+		03D139532B2756DF00248EB6 /* Journey */ = {
+			isa = PBXGroup;
+			children = (
+				03D1395D2B27578000248EB6 /* KMJourneyViewModel.swift */,
+				03D1395B2B27576600248EB6 /* KMJourneyViewController.swift */,
+			);
+			path = Journey;
+			sourceTree = "<group>";
+		};
+		03D139542B2756E900248EB6 /* Education */ = {
+			isa = PBXGroup;
+			children = (
+				03D139612B27579E00248EB6 /* KMEducationViewModel.swift */,
+				03D1395F2B27579100248EB6 /* KMEducationViewController.swift */,
+			);
+			path = Education;
+			sourceTree = "<group>";
+		};
+		03D139552B2756F100248EB6 /* Skills */ = {
+			isa = PBXGroup;
+			children = (
+				03D139652B2757CB00248EB6 /* KMSkillsViewModel.swift */,
+				03D139632B2757BA00248EB6 /* KMSkillsViewController.swift */,
+			);
+			path = Skills;
+			sourceTree = "<group>";
+		};
+		03D139562B2756FA00248EB6 /* Hobbies */ = {
+			isa = PBXGroup;
+			children = (
+				03D139692B2757ED00248EB6 /* KMHobbiesViewModel.swift */,
+				03D139672B2757DC00248EB6 /* KMHobbiesViewController.swift */,
+			);
+			path = Hobbies;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -233,7 +353,6 @@
 			files = (
 				03D139192B27447D00248EB6 /* LaunchScreen.storyboard in Resources */,
 				03D139162B27447D00248EB6 /* Assets.xcassets in Resources */,
-				03D139142B27447B00248EB6 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -258,9 +377,26 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				03D139112B27447B00248EB6 /* ViewController.swift in Sources */,
+				03D139412B274AAA00248EB6 /* KMViewControllerFactory.swift in Sources */,
+				03D139582B27573B00248EB6 /* KMProfileViewController.swift in Sources */,
 				03D1390D2B27447B00248EB6 /* AppDelegate.swift in Sources */,
+				03D1395E2B27578000248EB6 /* KMJourneyViewModel.swift in Sources */,
+				03D1395C2B27576600248EB6 /* KMJourneyViewController.swift in Sources */,
+				03D139622B27579E00248EB6 /* KMEducationViewModel.swift in Sources */,
+				03D139492B27560100248EB6 /* KMProfileCoordinator.swift in Sources */,
+				03D139682B2757DC00248EB6 /* KMHobbiesViewController.swift in Sources */,
+				03D1395A2B27575300248EB6 /* KMProfileViewModel.swift in Sources */,
+				03D1394F2B27564F00248EB6 /* KMSkillsCoordinator.swift in Sources */,
+				03D139472B274DD600248EB6 /* KMTabController.swift in Sources */,
+				03D139602B27579100248EB6 /* KMEducationViewController.swift in Sources */,
+				03D1394B2B27562200248EB6 /* KMJourneyCoordinator.swift in Sources */,
 				03D1390F2B27447B00248EB6 /* SceneDelegate.swift in Sources */,
+				03D139512B27567200248EB6 /* KMHobbiesCoordinator.swift in Sources */,
+				03D139662B2757CB00248EB6 /* KMSkillsViewModel.swift in Sources */,
+				03D1393E2B274A5900248EB6 /* KMMainCoordinator.swift in Sources */,
+				03D139642B2757BA00248EB6 /* KMSkillsViewController.swift in Sources */,
+				03D1394D2B27563900248EB6 /* KMEducationCoordinator.swift in Sources */,
+				03D1396A2B2757ED00248EB6 /* KMHobbiesViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -297,14 +433,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		03D139122B27447B00248EB6 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				03D139132B27447B00248EB6 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		03D139172B27447D00248EB6 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -447,7 +575,6 @@
 				INFOPLIST_FILE = KnowMe/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -475,7 +602,6 @@
 				INFOPLIST_FILE = KnowMe/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
