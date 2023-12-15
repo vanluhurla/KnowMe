@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		03BC8DB02B28C9FA000D09F6 /* KMProfileDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03BC8DAF2B28C9FA000D09F6 /* KMProfileDetailsViewController.swift */; };
 		03D1390D2B27447B00248EB6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03D1390C2B27447B00248EB6 /* AppDelegate.swift */; };
 		03D1390F2B27447B00248EB6 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03D1390E2B27447B00248EB6 /* SceneDelegate.swift */; };
 		03D139162B27447D00248EB6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 03D139152B27447D00248EB6 /* Assets.xcassets */; };
@@ -52,6 +53,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		03BC8DAF2B28C9FA000D09F6 /* KMProfileDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KMProfileDetailsViewController.swift; sourceTree = "<group>"; };
 		03D139092B27447B00248EB6 /* KnowMe.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = KnowMe.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		03D1390C2B27447B00248EB6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		03D1390E2B27447B00248EB6 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -207,6 +209,7 @@
 			children = (
 				03D139592B27575300248EB6 /* KMProfileViewModel.swift */,
 				03D139572B27573B00248EB6 /* KMProfileViewController.swift */,
+				03BC8DAF2B28C9FA000D09F6 /* KMProfileDetailsViewController.swift */,
 			);
 			path = Profile;
 			sourceTree = "<group>";
@@ -390,6 +393,7 @@
 				03D139472B274DD600248EB6 /* KMTabController.swift in Sources */,
 				03D139602B27579100248EB6 /* KMEducationViewController.swift in Sources */,
 				03D1394B2B27562200248EB6 /* KMJourneyCoordinator.swift in Sources */,
+				03BC8DB02B28C9FA000D09F6 /* KMProfileDetailsViewController.swift in Sources */,
 				03D1390F2B27447B00248EB6 /* SceneDelegate.swift in Sources */,
 				03D139512B27567200248EB6 /* KMHobbiesCoordinator.swift in Sources */,
 				03D139662B2757CB00248EB6 /* KMSkillsViewModel.swift in Sources */,

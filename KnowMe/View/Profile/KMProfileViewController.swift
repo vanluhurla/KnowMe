@@ -10,9 +10,11 @@ import UIKit
 class KMProfileViewController: UIViewController {
     
     let viewModel: KMProfileViewModel
-    
-    init(viewModel: KMProfileViewModel) {
+    let detailsViewController: KMProfileDetailsViewController
+
+    init(viewModel: KMProfileViewModel, detailsViewController: KMProfileDetailsViewController) {
         self.viewModel = viewModel
+        self.detailsViewController = detailsViewController
         super.init(nibName: nil, bundle: nil)
     }
     
@@ -22,7 +24,29 @@ class KMProfileViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        view.backgroundColor = .systemBackground
+        view.backgroundColor = .orange
+        profileDetailsViewController()
     }
+    
+    @objc func profileDetailsViewController() {
+        let detailsviewController = KMProfileDetailsViewController()
+
+        if let sheet = detailsviewController.sheetPresentationController {
+            sheet.detents = [.medium(), .large()]
+            sheet.preferredCornerRadius = 30
+            sheet.prefersGrabberVisible = true
+        }
+        present(detailsviewController, animated: true, completion: nil)
+    }
+    
+//    private func profileDetailsViewController() {
+//        let detailsViewController = KMProfileDetailsViewController()
+//        let navController = UINavigationController(rootViewController: detailsViewController)
+//        
+//        if let sheet = navController.sheetPresentationController {
+//            sheet.detents = [.medium(), .large()]
+//        }
+//        present(detailsViewController, animated: true, completion: nil)
+//}
 }
 
