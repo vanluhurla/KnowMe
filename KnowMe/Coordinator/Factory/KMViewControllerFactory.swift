@@ -11,7 +11,8 @@ class KMViewControllerFactory {
     
     func profileViewController() -> UIViewController {
         let viewModel = KMProfileViewModel()
-        let viewController = KMProfileViewController(viewModel: viewModel)
+        let detailsViewController = KMProfileDetailsViewController()
+        let viewController = KMProfileViewController(viewModel: viewModel, detailsViewController: detailsViewController)
         return viewController
     }
     
