@@ -7,6 +7,6 @@
 
 import Foundation
 
-class KMHobbiesViewModel: NSObject {
+class KMContactViewModel: NSObject {
     
 }

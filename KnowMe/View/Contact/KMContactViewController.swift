@@ -7,11 +7,11 @@
 
 import UIKit
 
-class KMHobbiesViewController: UIViewController {
+class KMContactViewController: UIViewController {
     
-    let viewModel: KMHobbiesViewModel
+    let viewModel: KMContactViewModel
     
-    init(viewModel: KMHobbiesViewModel) {
+    init(viewModel: KMContactViewModel) {
         self.viewModel = viewModel
         super.init(nibName: nil, bundle: nil)
     }
