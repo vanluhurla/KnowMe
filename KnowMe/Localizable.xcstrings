@@ -1,0 +1,50 @@
+{
+  "sourceLanguage" : "en",
+  "strings" : {
+    "about" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "About Me..."
+          }
+        }
+      }
+    },
+    "hello" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Hi, I'm Vanessa!"
+          }
+        }
+      }
+    },
+    "personal" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "I've witnessed the profound impact that mobile applications have had on improving people's lives, inspiring my desire to be a part of this transformative industry. \n\nI'm dedicated to crafting solutions and collaborating effectively within teams.\n\niOS stands out as my platform of expertise, given my existing familiarity with it from a user's perspective, interfaces, and design. \n\nMy goal is clear: to become an iOS Developer and continue contributing to this positive change in people's lives."
+          }
+        }
+      }
+    },
+    "professional" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "I am a passionate and enthusiastic iOS developer in search of my first opportunity in the field following a career change.\n \nI strongly believe that technology should be used to improve and facilitate people's lives, and I am eager to contribute to this endeavour. I love writing code, collaborating with teams, building beautiful interfaces, and delivering incredible user experiences. \n\nMost importantly, I take joy in learning at each step of my journey.\n Having invested a considerable amount of time in learning code and processes, I am confident that I am ready to start on a full-time iOS development journey. "
+          }
+        }
+      }
+    }
+  },
+  "version" : "1.0"
+}

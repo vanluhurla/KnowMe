@@ -35,8 +35,8 @@ class KMViewControllerFactory {
     }
     
     func hobbiesViewController() -> UIViewController {
-        let viewModel = KMHobbiesViewModel()
-        let viewController = KMHobbiesViewController(viewModel: viewModel)
+        let viewModel = KMContactViewModel()
+        let viewController = KMContactViewController(viewModel: viewModel)
         return viewController
     }
 }
