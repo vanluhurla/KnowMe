@@ -15,10 +15,11 @@ class KMProfileViewController: UIViewController {
         let collectionView = UICollectionView(frame: .zero, collectionViewLayout: layout)
         collectionView.backgroundColor = .clear
         collectionView.translatesAutoresizingMaskIntoConstraints = false
-        collectionView.contentInset = UIEdgeInsets(top: 10, left: 0, bottom: 0, right: 0)
+        collectionView.contentInset = UIEdgeInsets(top: 10, left: 0, bottom: 10, right: 0)
         collectionView.register(KMProfileImageCell.self, forCellWithReuseIdentifier: KMProfileImageCell.identifier)
         collectionView.register(KMProfileHeader.self, forSupplementaryViewOfKind: UICollectionView.elementKindSectionHeader, withReuseIdentifier: KMProfileHeader.identifier)
-        collectionView.register(KMProfileDetailsTextCell.self, forCellWithReuseIdentifier: KMProfileDetailsTextCell.identifier)
+        collectionView.register(KMProfilePersonalCell.self, forCellWithReuseIdentifier: KMProfilePersonalCell.identifier)
+        collectionView.register(KMProfileProfessionalCell.self, forCellWithReuseIdentifier: KMProfileProfessionalCell.identifier)
         return collectionView
     }()
     //MARK: Data Source
@@ -31,9 +32,9 @@ class KMProfileViewController: UIViewController {
             case .image(let item):
                 return profileImage(collectionView: collectionView, indexPath: indexPath, item: item)
             case .personalInfo(let item):
-                return profilePersonalDetails(collectionView: collectionView, indexPath: indexPath, text: item.personalInfo)
+                return profilePersonalDetails(collectionView: collectionView, indexPath: indexPath, item: item)
             case .professionalInfo(let item):
-                return profileProfessionalDetails(collectionView: collectionView, indexPath: indexPath, text: item.professionalInfo)
+                return profileProfessionalDetails(collectionView: collectionView, indexPath: indexPath, item: item)
             }
         }
         dataSource.supplementaryViewProvider = { [weak self] collectionView, kind, indexPath in
@@ -87,6 +88,7 @@ extension KMProfileViewController: KMProfileViewModelDelegate {
         applySnapshot()
     }
 }
+
     //MARK: Collection View UI
 extension KMProfileViewController {
     func setupUI() {
@@ -117,6 +119,7 @@ extension KMProfileViewController {
         dataSource.apply(snapshot)
     }
 }
+
     //MARK: Cells
 private extension KMProfileViewController {
     func profileImage(collectionView: UICollectionView, indexPath: IndexPath, item: ProfileImageItem) -> UICollectionViewCell {
@@ -136,36 +139,28 @@ private extension KMProfileViewController {
         return sectionHeader
     }
     
-    func profilePersonalDetails(collectionView: UICollectionView, indexPath: IndexPath, text: String) -> UICollectionViewCell {
-        guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: KMProfileDetailsTextCell.identifier, for: indexPath) as? KMProfileDetailsTextCell else {
+    func profilePersonalDetails(collectionView: UICollectionView, indexPath: IndexPath, item: ProfilePersonalItem) -> UICollectionViewCell {
+        guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: KMProfilePersonalCell.identifier, for: indexPath) as? KMProfilePersonalCell else {
             return UICollectionViewCell()
         }
-        cell.setupCellContent(text: text)
+        cell.setupCellContent(item: item)
+        cell.delegate = self
         return cell
     }
     
-    func profileProfessionalDetails(collectionView: UICollectionView, indexPath: IndexPath, text: String) -> UICollectionViewCell {
-        guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: KMProfileDetailsTextCell.identifier, for: indexPath) as? KMProfileDetailsTextCell else {
+    func profileProfessionalDetails(collectionView: UICollectionView, indexPath: IndexPath, item: ProfileProfessionalItem) -> UICollectionViewCell {
+        guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: KMProfileProfessionalCell.identifier, for: indexPath) as? KMProfileProfessionalCell else {
             return UICollectionViewCell()
         }
-        cell.setupCellContent(text: text)
+        cell.setupCellContent(item: item)
+        cell.delegate = self
         return cell
     }
 }
 
-
-
-
-
-
-
-//    private func profileDetailsViewController() {
-//        let detailsViewController = KMProfileDetailsViewController()
-//        let navController = UINavigationController(rootViewController: detailsViewController)
-//
-//        if let sheet = navController.sheetPresentationController {
-//            sheet.detents = [.medium(), .large()]
-//        }
-//        present(detailsViewController, animated: true, completion: nil)
-//}
+extension KMProfileViewController: KMProfileCellDelegate {
+    func didTapReadMoreButton() {
+        viewModel.didTapReadMeButton()
+    }
+}
 

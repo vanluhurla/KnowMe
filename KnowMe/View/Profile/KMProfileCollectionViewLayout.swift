@@ -45,7 +45,7 @@ private extension KMProfileCollectionViewLayout {
         section.boundarySupplementaryItems = [header]
         
         section.interGroupSpacing = 10
-        section.contentInsets = NSDirectionalEdgeInsets(top: 25, leading: 10, bottom: 25, trailing: 10)
+        section.contentInsets = NSDirectionalEdgeInsets(top: 20, leading: 10, bottom: 25, trailing: 10)
         
         return section
     }
@@ -66,11 +66,11 @@ private extension KMProfileCollectionViewLayout {
             layoutSize: footerHeaderSize,
             elementKind: UICollectionView.elementKindSectionHeader,
             alignment: .top)
-        header.contentInsets = NSDirectionalEdgeInsets(top: 0, leading: 0, bottom: 0, trailing: 10)
+        header.contentInsets = NSDirectionalEdgeInsets(top: 0, leading: 0, bottom: 30, trailing: 10)
         section.boundarySupplementaryItems = [header]
         
         section.interGroupSpacing = 1
-        section.contentInsets = NSDirectionalEdgeInsets(top: 25, leading: 10, bottom: 0, trailing: 10)
+        section.contentInsets = NSDirectionalEdgeInsets(top: 10, leading: 10, bottom: 5, trailing: 10)
         
         return section
     }

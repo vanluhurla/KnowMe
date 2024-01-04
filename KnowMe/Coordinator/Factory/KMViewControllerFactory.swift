@@ -9,8 +9,8 @@ import UIKit
 
 class KMViewControllerFactory {
     
-    func profileViewController() -> UIViewController {
-        let viewModel = KMProfileViewModel()
+    func profileViewController(coordinator: KMProfileViewModelCoordinator) -> UIViewController {
+        let viewModel = KMProfileViewModel(coordinator: coordinator)
         let detailsViewController = KMProfileDetailsViewController()
         let viewController = KMProfileViewController(viewModel: viewModel, detailsViewController: detailsViewController)
         return viewController
@@ -39,4 +39,17 @@ class KMViewControllerFactory {
         let viewController = KMContactViewController(viewModel: viewModel)
         return viewController
     }
+    
+    func profileDetailsViewController() -> UINavigationController {
+        let detailsViewController = KMProfileDetailsViewController()
+        let navController = UINavigationController(rootViewController: detailsViewController)
+        
+        if let sheet = navController.sheetPresentationController {
+            sheet.detents = [.medium(), .large()]
+        }
+        return navController
+    }
 }
+
+
+
