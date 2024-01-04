@@ -40,8 +40,10 @@ struct ProfileImageItem: Hashable {
 
 struct ProfilePersonalItem: Hashable {
     let personalInfo: String
+    let icon: String
 }
 
 struct ProfileProfessionalItem: Hashable {
     let professionalInfo: String
+    let icon: String
 }

@@ -8,6 +8,8 @@
 import UIKit
 
 class KMProfileCoordinator {
+
+    
     
     let navigationController: UINavigationController
     let tab = KMTab.profile
@@ -18,7 +20,7 @@ class KMProfileCoordinator {
     }
     
     func start() {
-        navigationController.pushViewController(viewFactory.profileViewController(), animated: false)
+        navigationController.pushViewController(viewFactory.profileViewController(coordinator: self), animated: false)
         setupTab()
     }
     
@@ -28,3 +30,11 @@ class KMProfileCoordinator {
                                                        tag: tab.rawValue)
     }
 }
+
+extension KMProfileCoordinator: KMProfileViewModelCoordinator {
+    func presentMoreDetails() {
+        navigationController.present(viewFactory.profileDetailsViewController(), animated: true)
+    }
+}
+
+//present(UIViewController(), animated: true, completion: nil)
