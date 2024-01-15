@@ -11,6 +11,6 @@ struct KMProfileDetails {
     let image: String = "vanessa_profile"
     let personalInfoIcon: String = "personal-information"
     let professionalInfoIcon: String = "professional-information"
-    let personalInfor = KMProfileStringKeys.firstCell.localised
+    let personalInfo = KMProfileStringKeys.firstCell.localised
     let professionalInfo = KMProfileStringKeys.secondCell.localised
 }

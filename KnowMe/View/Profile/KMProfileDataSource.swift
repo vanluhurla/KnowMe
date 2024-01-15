@@ -10,6 +10,7 @@ import UIKit
 typealias KMProfileDataSource = UICollectionViewDiffableDataSource<ProfileSection, ProfileItem>
 typealias KMProfileSnapshot = NSDiffableDataSourceSnapshot<ProfileSection, ProfileItem>
 
+
 enum ProfileSection: Int, CaseIterable {
     case image
     case personalInfo
@@ -28,22 +29,22 @@ enum ProfileSection: Int, CaseIterable {
     
 }
 
+enum ProfileContentType {
+    case personal, professional
+}
+
 enum ProfileItem: Hashable {
     case image(ProfileImageItem)
-    case personalInfo(ProfilePersonalItem)
-    case professionalInfo(ProfileProfessionalItem)
+    case personalInfo(ProfileContent)
+    case professionalInfo(ProfileContent)
 }
 
 struct ProfileImageItem: Hashable {
     let image: String
 }
 
-struct ProfilePersonalItem: Hashable {
-    let personalInfo: String
-    let icon: String
-}
-
-struct ProfileProfessionalItem: Hashable {
-    let professionalInfo: String
+struct ProfileContent: Hashable {
+    let type: ProfileContentType
+    let info: String
     let icon: String
 }

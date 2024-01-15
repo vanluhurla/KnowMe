@@ -12,7 +12,7 @@ struct KMProfileViewModelConfiguration {
 }
 
 protocol KMProfileViewModelCoordinator: AnyObject {
-    func presentMoreDetails()
+    func presentBottomSheet(with configuration: KMGenericBottomSheetConfiguration)
 }
 
 protocol KMProfileViewModelDelegate: AnyObject {
@@ -43,18 +43,32 @@ extension KMProfileViewModel {
     }
     
     func buildPersonalItem() -> [ProfileItem] {
-        let personalItem = ProfilePersonalItem(personalInfo: configuration.details.personalInfor, icon: configuration.details.personalInfoIcon)
-        let item = ProfileItem.personalInfo(personalItem)
+        let contentItem = ProfileContent(type: .personal,
+                                         info: configuration.details.personalInfo,
+                                         icon: configuration.details.personalInfoIcon)
+        let item = ProfileItem.personalInfo(contentItem)
         return [item]
     }
     
     func buildProfessionalItem() -> [ProfileItem] {
-        let professionalItem = ProfileProfessionalItem(professionalInfo: configuration.details.professionalInfo, icon: configuration.details.professionalInfoIcon)
-        let item = ProfileItem.professionalInfo(professionalItem)
+        let contentItem = ProfileContent(type: .professional,
+                                         info: configuration.details.professionalInfo,
+                                         icon: configuration.details.professionalInfoIcon)
+        let item = ProfileItem.professionalInfo(contentItem)
         return [item]
     }
     
-    func didTapReadMeButton() {
-        coordinator?.presentMoreDetails()
+    func buildBottomSheetConfiguration(type: ProfileContentType) -> KMGenericBottomSheetConfiguration {
+        switch type {
+        case .personal:
+            return KMGenericBottomSheetConfiguration(text: "personal")
+        case .professional:
+            return KMGenericBottomSheetConfiguration(text: "professional")
+        }
+    }
+    
+    func didTapReadMeButton(type: ProfileContentType) {
+        let configuration = buildBottomSheetConfiguration(type: type)
+        coordinator?.presentBottomSheet(with: configuration)
     }
 }

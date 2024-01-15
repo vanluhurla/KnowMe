@@ -11,12 +11,12 @@
 		030F61DB2B309EEA00911E8D /* Localizable.xcstrings in Resources */ = {isa = PBXBuildFile; fileRef = 030F61DA2B309EEA00911E8D /* Localizable.xcstrings */; };
 		030F61E12B30A5F800911E8D /* KMProfileStringKeys.swift in Sources */ = {isa = PBXBuildFile; fileRef = 030F61E02B30A5F800911E8D /* KMProfileStringKeys.swift */; };
 		030F61E32B30B15E00911E8D /* KMProfileHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 030F61E22B30B15E00911E8D /* KMProfileHeader.swift */; };
-		030F61E72B31F46000911E8D /* KMProfilePersonalCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 030F61E62B31F46000911E8D /* KMProfilePersonalCell.swift */; };
-		030F61EB2B334B6E00911E8D /* KMProfileProfessionalCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 030F61EA2B334B6E00911E8D /* KMProfileProfessionalCell.swift */; };
+		030F61E72B31F46000911E8D /* KMProfileContentCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 030F61E62B31F46000911E8D /* KMProfileContentCell.swift */; };
 		03BC8DB02B28C9FA000D09F6 /* KMProfileDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03BC8DAF2B28C9FA000D09F6 /* KMProfileDetailsViewController.swift */; };
 		03BC8DB72B2C6649000D09F6 /* KMProfileImageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03BC8DB62B2C6649000D09F6 /* KMProfileImageCell.swift */; };
 		03BC8DB92B2C6ED4000D09F6 /* KMProfileCollectionViewLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03BC8DB82B2C6ED4000D09F6 /* KMProfileCollectionViewLayout.swift */; };
 		03BC8DBB2B2C6F29000D09F6 /* KMProfileDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03BC8DBA2B2C6F29000D09F6 /* KMProfileDataSource.swift */; };
+		03BD947F2B482A7B00700C34 /* KMColours.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03BD947E2B482A7B00700C34 /* KMColours.swift */; };
 		03D1390D2B27447B00248EB6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03D1390C2B27447B00248EB6 /* AppDelegate.swift */; };
 		03D1390F2B27447B00248EB6 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03D1390E2B27447B00248EB6 /* SceneDelegate.swift */; };
 		03D139162B27447D00248EB6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 03D139152B27447D00248EB6 /* Assets.xcassets */; };
@@ -66,12 +66,12 @@
 		030F61DA2B309EEA00911E8D /* Localizable.xcstrings */ = {isa = PBXFileReference; lastKnownFileType = text.json.xcstrings; path = Localizable.xcstrings; sourceTree = "<group>"; };
 		030F61E02B30A5F800911E8D /* KMProfileStringKeys.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KMProfileStringKeys.swift; sourceTree = "<group>"; };
 		030F61E22B30B15E00911E8D /* KMProfileHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KMProfileHeader.swift; sourceTree = "<group>"; };
-		030F61E62B31F46000911E8D /* KMProfilePersonalCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KMProfilePersonalCell.swift; sourceTree = "<group>"; };
-		030F61EA2B334B6E00911E8D /* KMProfileProfessionalCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KMProfileProfessionalCell.swift; sourceTree = "<group>"; };
+		030F61E62B31F46000911E8D /* KMProfileContentCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KMProfileContentCell.swift; sourceTree = "<group>"; };
 		03BC8DAF2B28C9FA000D09F6 /* KMProfileDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KMProfileDetailsViewController.swift; sourceTree = "<group>"; };
 		03BC8DB62B2C6649000D09F6 /* KMProfileImageCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KMProfileImageCell.swift; sourceTree = "<group>"; };
 		03BC8DB82B2C6ED4000D09F6 /* KMProfileCollectionViewLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KMProfileCollectionViewLayout.swift; sourceTree = "<group>"; };
 		03BC8DBA2B2C6F29000D09F6 /* KMProfileDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KMProfileDataSource.swift; sourceTree = "<group>"; };
+		03BD947E2B482A7B00700C34 /* KMColours.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KMColours.swift; sourceTree = "<group>"; };
 		03D139092B27447B00248EB6 /* KnowMe.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = KnowMe.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		03D1390C2B27447B00248EB6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		03D1390E2B27447B00248EB6 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -149,10 +149,17 @@
 			children = (
 				030F61E22B30B15E00911E8D /* KMProfileHeader.swift */,
 				03BC8DB62B2C6649000D09F6 /* KMProfileImageCell.swift */,
-				030F61E62B31F46000911E8D /* KMProfilePersonalCell.swift */,
-				030F61EA2B334B6E00911E8D /* KMProfileProfessionalCell.swift */,
+				030F61E62B31F46000911E8D /* KMProfileContentCell.swift */,
 			);
 			path = Cell;
+			sourceTree = "<group>";
+		};
+		03BD947B2B48260900700C34 /* Design */ = {
+			isa = PBXGroup;
+			children = (
+				03BD947E2B482A7B00700C34 /* KMColours.swift */,
+			);
+			path = Design;
 			sourceTree = "<group>";
 		};
 		03D139002B27447B00248EB6 = {
@@ -178,6 +185,7 @@
 		03D1390B2B27447B00248EB6 /* KnowMe */ = {
 			isa = PBXGroup;
 			children = (
+				03BD947B2B48260900700C34 /* Design */,
 				030F61DF2B30A50000911E8D /* Content */,
 				030F61D52B2CB3DA00911E8D /* Model */,
 				03D1393C2B274A2B00248EB6 /* Coordinator */,
@@ -439,6 +447,7 @@
 				03D1395C2B27576600248EB6 /* KMJourneyViewController.swift in Sources */,
 				03BC8DB92B2C6ED4000D09F6 /* KMProfileCollectionViewLayout.swift in Sources */,
 				03D139622B27579E00248EB6 /* KMEducationViewModel.swift in Sources */,
+				03BD947F2B482A7B00700C34 /* KMColours.swift in Sources */,
 				030F61E12B30A5F800911E8D /* KMProfileStringKeys.swift in Sources */,
 				03D139492B27560100248EB6 /* KMProfileCoordinator.swift in Sources */,
 				03D139682B2757DC00248EB6 /* KMContactViewController.swift in Sources */,
@@ -449,12 +458,11 @@
 				03D139602B27579100248EB6 /* KMEducationViewController.swift in Sources */,
 				03D1394B2B27562200248EB6 /* KMJourneyCoordinator.swift in Sources */,
 				03BC8DB02B28C9FA000D09F6 /* KMProfileDetailsViewController.swift in Sources */,
-				030F61EB2B334B6E00911E8D /* KMProfileProfessionalCell.swift in Sources */,
 				03D1390F2B27447B00248EB6 /* SceneDelegate.swift in Sources */,
 				03BC8DBB2B2C6F29000D09F6 /* KMProfileDataSource.swift in Sources */,
 				03BC8DB72B2C6649000D09F6 /* KMProfileImageCell.swift in Sources */,
 				03D139512B27567200248EB6 /* KMHobbiesCoordinator.swift in Sources */,
-				030F61E72B31F46000911E8D /* KMProfilePersonalCell.swift in Sources */,
+				030F61E72B31F46000911E8D /* KMProfileContentCell.swift in Sources */,
 				03D139662B2757CB00248EB6 /* KMSkillsViewModel.swift in Sources */,
 				03D1393E2B274A5900248EB6 /* KMMainCoordinator.swift in Sources */,
 				03D139642B2757BA00248EB6 /* KMSkillsViewController.swift in Sources */,
@@ -648,9 +656,12 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.vanluhurla.KnowMe;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -675,9 +686,12 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.vanluhurla.KnowMe;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};

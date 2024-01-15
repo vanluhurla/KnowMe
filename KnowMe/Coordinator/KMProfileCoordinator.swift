@@ -9,8 +9,6 @@ import UIKit
 
 class KMProfileCoordinator {
 
-    
-    
     let navigationController: UINavigationController
     let tab = KMTab.profile
     private let viewFactory = KMViewControllerFactory()
@@ -32,8 +30,9 @@ class KMProfileCoordinator {
 }
 
 extension KMProfileCoordinator: KMProfileViewModelCoordinator {
-    func presentMoreDetails() {
-        navigationController.present(viewFactory.profileDetailsViewController(), animated: true)
+    func presentBottomSheet(with configuration: KMGenericBottomSheetConfiguration) {
+        let viewController = viewFactory.profileDetailsBottomSheet(configuration: configuration)
+        navigationController.present(viewController, animated: true)
     }
 }
 
