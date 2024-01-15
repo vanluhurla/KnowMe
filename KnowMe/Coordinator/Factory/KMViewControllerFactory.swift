@@ -40,7 +40,10 @@ class KMViewControllerFactory {
         return viewController
     }
     
-    func profileDetailsViewController() -> UINavigationController {
+    func profileDetailsBottomSheet(configuration: KMGenericBottomSheetConfiguration) -> UINavigationController {
+        //view model ahsiudhjsaoidhaosij(configur)
+        // let detailsViewController = KMProfileDetailsViewController(viewModel: VM)
+        print(configuration.text)
         let detailsViewController = KMProfileDetailsViewController()
         let navController = UINavigationController(rootViewController: detailsViewController)
         

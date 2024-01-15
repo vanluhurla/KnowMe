@@ -1,18 +1,18 @@
 //
-//  KMProfileProfessionalCell.swift
+//  KMProfileContentCell.swift
 //  KnowMe
 //
-//  Created by Vanessa Hurla on 20/12/2023.
+//  Created by Vanessa Hurla on 19/12/2023.
 //
-
 
 import UIKit
 
-class KMProfileProfessionalCell: UICollectionViewCell {
-    
-    weak var delegate: KMProfileCellDelegate?
-    
-    static var identifier = "ReusableKMProfileProfessionalCell"
+protocol KMProfileCellDelegate: AnyObject {
+    func didTapReadMoreButton(type: ProfileContentType)
+}
+
+class KMProfileContentCell: UICollectionViewCell {
+    static var identifier = "ReusableKMProfileContentCell"
     
     private var imageSize = CGSize(width: 50, height: 50)
     private var detailsTextViewCell: UIView = {
@@ -60,6 +60,10 @@ class KMProfileProfessionalCell: UICollectionViewCell {
         return stackView
     }()
     
+    var contentType: ProfileContentType?
+    
+    weak var delegate: KMProfileCellDelegate?
+    
     override init(frame: CGRect) {
         super.init(frame: frame)
     }
@@ -68,18 +72,19 @@ class KMProfileProfessionalCell: UICollectionViewCell {
         fatalError("init(coder:) has not been implemented")
     }
     
-    func setupCellContent(item: ProfileProfessionalItem) {
+    func setupCellContent(item: ProfileContent) {
+        contentType = item.type
         setupValues(item: item)
         setupUI()
     }
 }
 
-private extension KMProfileProfessionalCell {
-    func setupValues(item: ProfileProfessionalItem) {
-        profileTextLabel.text = item.professionalInfo
+private extension KMProfileContentCell {
+    func setupValues(item: ProfileContent) {
+        profileTextLabel.text = item.info
         if let image = UIImage(named: item.icon),
            let scaledImage = image.resize(to: imageSize) {
-            iconImageView.image = scaledImage            
+            iconImageView.image = scaledImage
         }
         profileTextCellButton.addTarget(self, action: #selector(didTapReadMeButton), for: .touchUpInside)
     }
@@ -98,7 +103,6 @@ private extension KMProfileProfessionalCell {
         mainStackView.addArrangedSubview(profileTextCellButton)
         textStackView.addArrangedSubview(iconImageView)
         textStackView.addArrangedSubview(profileTextLabel)
-        
     }
     
     func layoutViews() {
@@ -145,7 +149,10 @@ private extension KMProfileProfessionalCell {
     }
     
     @objc func didTapReadMeButton() {
-        delegate?.didTapReadMoreButton()
+        guard let contentType else {
+            return
+        }
+        delegate?.didTapReadMoreButton(type: contentType)
     }
 }
 
@@ -157,5 +164,6 @@ private extension UIImage {
         }
     }
 }
+
 
 
