@@ -1,5 +1,5 @@
 //
-//  KMProfileDetailsViewController.swift
+//  KMDetailsViewController.swift
 //  KnowMe
 //
 //  Created by Vanessa Hurla on 12/12/2023.
@@ -7,49 +7,65 @@
 
 import UIKit
 
-struct KMGenericBottomSheetConfiguration {
-    let text: String
-}
-
-class KMProfileDetailsViewController: UIViewController {
+class KMDetailsViewController: UIViewController {
     
-
     private var mainStackView: UIStackView = {
         let stackView = UIStackView()
         stackView.axis = .vertical
         stackView.backgroundColor = .clear
+        stackView.spacing = 5
         stackView.translatesAutoresizingMaskIntoConstraints = false
         return stackView
     }()
     private var iconImageView: UIImageView = {
         let imageView = UIImageView()
-        imageView.contentMode = .center
+        imageView.contentMode = .scaleAspectFit
         imageView.backgroundColor = .clear
         return imageView
     }()
     private var detailsTextLabel: UILabel = {
         let label = UILabel()
         label.font = UIFont.systemFont(ofSize: 17, weight: .regular)
-        label.text = "Vanessa"
         label.numberOfLines = 0
-        label.textAlignment = .justified
+        label.textColor = .mainText
+        label.textAlignment = .natural
         return label
     }()
     
+    let viewModel: KMDetailsViewModel
+    
+    init(viewModel: KMDetailsViewModel) {
+        self.viewModel = viewModel
+        super.init(nibName: nil, bundle: nil)
+        self.viewModel.delegate = self
+    }
+    
+    required init?(coder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        view.backgroundColor = .systemMint
+        navigationController?.isNavigationBarHidden = true
+        view.backgroundColor = .backgroundDetails
+        viewModel.loadData()
+        setupUI()
         
-        func setupCellContent() {
-           // viewmodel.config.text
-            setupUI()
-        }
     }
 }
 
-extension KMProfileDetailsViewController {
+extension KMDetailsViewController: KMGenericBottomSheetDelegate {
+    func didReceiveContent(text: String, icon: String) {
+        detailsTextLabel.text = text
+        iconImageView.image = UIImage(named: icon)
+    }
+}
+
+extension KMDetailsViewController {
     func setupUI() {
+        
+        
+
         setupViews()
         setupLayout()
         stackViewIndentation()
@@ -63,7 +79,7 @@ extension KMProfileDetailsViewController {
     
     func setupLayout() {
         NSLayoutConstraint.activate([
-            mainStackView.leadingAnchor.constraint(equalTo: view.leadingAnchor),
+            mainStackView.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 16),
             mainStackView.trailingAnchor.constraint(equalTo: view.trailingAnchor),
             mainStackView.topAnchor.constraint(equalTo: view.topAnchor),
             mainStackView.bottomAnchor.constraint(equalTo: view.bottomAnchor),
@@ -81,4 +97,6 @@ extension KMProfileDetailsViewController {
                                                                          bottom: 16,
                                                                          trailing: 16)
     }
+    
+
 }

@@ -7,8 +7,10 @@
 
 import UIKit
 
-//extension UIColor {
-//    static let mainText = UIColor(named: "mainText")
-//    static let backPrimary = UIColor(named: "backPrimary")
-//    static let mainColour = UIColor(named: "mainColour")
-//}
+extension UIColor {
+    static let primaryText = UIColor(named: "mainText")
+    static let backgroundPrimary = UIColor(named: "backPrimary")
+    static let backgroundDetails = UIColor(named: "mainColour")
+}
+
+
