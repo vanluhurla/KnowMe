@@ -26,7 +26,6 @@ enum ProfileSection: Int, CaseIterable {
             return ""
         }
     }
-    
 }
 
 enum ProfileContentType {

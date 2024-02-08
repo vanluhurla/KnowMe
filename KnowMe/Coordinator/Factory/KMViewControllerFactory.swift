@@ -11,8 +11,7 @@ class KMViewControllerFactory {
     
     func profileViewController(coordinator: KMProfileViewModelCoordinator) -> UIViewController {
         let viewModel = KMProfileViewModel(coordinator: coordinator)
-        let detailsViewController = KMProfileDetailsViewController()
-        let viewController = KMProfileViewController(viewModel: viewModel, detailsViewController: detailsViewController)
+        let viewController = KMProfileViewController(viewModel: viewModel)
         return viewController
     }
     
@@ -41,10 +40,8 @@ class KMViewControllerFactory {
     }
     
     func profileDetailsBottomSheet(configuration: KMGenericBottomSheetConfiguration) -> UINavigationController {
-        //view model ahsiudhjsaoidhaosij(configur)
-        // let detailsViewController = KMProfileDetailsViewController(viewModel: VM)
-        print(configuration.text)
-        let detailsViewController = KMProfileDetailsViewController()
+        let viewModel = KMDetailsViewModel(configuration: configuration)
+        let detailsViewController = KMDetailsViewController(viewModel: viewModel)
         let navController = UINavigationController(rootViewController: detailsViewController)
         
         if let sheet = navController.sheetPresentationController {

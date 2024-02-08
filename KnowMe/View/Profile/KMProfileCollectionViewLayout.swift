@@ -69,7 +69,7 @@ private extension KMProfileCollectionViewLayout {
         header.contentInsets = NSDirectionalEdgeInsets(top: 0, leading: 0, bottom: 30, trailing: 10)
         section.boundarySupplementaryItems = [header]
         
-        section.interGroupSpacing = 1
+        section.interGroupSpacing = 5
         section.contentInsets = NSDirectionalEdgeInsets(top: 10, leading: 10, bottom: 5, trailing: 10)
         
         return section

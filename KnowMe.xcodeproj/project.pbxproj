@@ -12,11 +12,12 @@
 		030F61E12B30A5F800911E8D /* KMProfileStringKeys.swift in Sources */ = {isa = PBXBuildFile; fileRef = 030F61E02B30A5F800911E8D /* KMProfileStringKeys.swift */; };
 		030F61E32B30B15E00911E8D /* KMProfileHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 030F61E22B30B15E00911E8D /* KMProfileHeader.swift */; };
 		030F61E72B31F46000911E8D /* KMProfileContentCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 030F61E62B31F46000911E8D /* KMProfileContentCell.swift */; };
-		03BC8DB02B28C9FA000D09F6 /* KMProfileDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03BC8DAF2B28C9FA000D09F6 /* KMProfileDetailsViewController.swift */; };
+		03BC8DB02B28C9FA000D09F6 /* KMDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03BC8DAF2B28C9FA000D09F6 /* KMDetailsViewController.swift */; };
 		03BC8DB72B2C6649000D09F6 /* KMProfileImageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03BC8DB62B2C6649000D09F6 /* KMProfileImageCell.swift */; };
 		03BC8DB92B2C6ED4000D09F6 /* KMProfileCollectionViewLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03BC8DB82B2C6ED4000D09F6 /* KMProfileCollectionViewLayout.swift */; };
 		03BC8DBB2B2C6F29000D09F6 /* KMProfileDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03BC8DBA2B2C6F29000D09F6 /* KMProfileDataSource.swift */; };
 		03BD947F2B482A7B00700C34 /* KMColours.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03BD947E2B482A7B00700C34 /* KMColours.swift */; };
+		03BD94822B63C90900700C34 /* KMDetailsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03BD94812B63C90900700C34 /* KMDetailsViewModel.swift */; };
 		03D1390D2B27447B00248EB6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03D1390C2B27447B00248EB6 /* AppDelegate.swift */; };
 		03D1390F2B27447B00248EB6 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03D1390E2B27447B00248EB6 /* SceneDelegate.swift */; };
 		03D139162B27447D00248EB6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 03D139152B27447D00248EB6 /* Assets.xcassets */; };
@@ -67,11 +68,12 @@
 		030F61E02B30A5F800911E8D /* KMProfileStringKeys.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KMProfileStringKeys.swift; sourceTree = "<group>"; };
 		030F61E22B30B15E00911E8D /* KMProfileHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KMProfileHeader.swift; sourceTree = "<group>"; };
 		030F61E62B31F46000911E8D /* KMProfileContentCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KMProfileContentCell.swift; sourceTree = "<group>"; };
-		03BC8DAF2B28C9FA000D09F6 /* KMProfileDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KMProfileDetailsViewController.swift; sourceTree = "<group>"; };
+		03BC8DAF2B28C9FA000D09F6 /* KMDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KMDetailsViewController.swift; sourceTree = "<group>"; };
 		03BC8DB62B2C6649000D09F6 /* KMProfileImageCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KMProfileImageCell.swift; sourceTree = "<group>"; };
 		03BC8DB82B2C6ED4000D09F6 /* KMProfileCollectionViewLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KMProfileCollectionViewLayout.swift; sourceTree = "<group>"; };
 		03BC8DBA2B2C6F29000D09F6 /* KMProfileDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KMProfileDataSource.swift; sourceTree = "<group>"; };
 		03BD947E2B482A7B00700C34 /* KMColours.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KMColours.swift; sourceTree = "<group>"; };
+		03BD94812B63C90900700C34 /* KMDetailsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KMDetailsViewModel.swift; sourceTree = "<group>"; };
 		03D139092B27447B00248EB6 /* KnowMe.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = KnowMe.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		03D1390C2B27447B00248EB6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		03D1390E2B27447B00248EB6 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -268,7 +270,8 @@
 				03BC8DB82B2C6ED4000D09F6 /* KMProfileCollectionViewLayout.swift */,
 				03D139592B27575300248EB6 /* KMProfileViewModel.swift */,
 				03D139572B27573B00248EB6 /* KMProfileViewController.swift */,
-				03BC8DAF2B28C9FA000D09F6 /* KMProfileDetailsViewController.swift */,
+				03BD94812B63C90900700C34 /* KMDetailsViewModel.swift */,
+				03BC8DAF2B28C9FA000D09F6 /* KMDetailsViewController.swift */,
 			);
 			path = Profile;
 			sourceTree = "<group>";
@@ -441,6 +444,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				03D139412B274AAA00248EB6 /* KMViewControllerFactory.swift in Sources */,
+				03BD94822B63C90900700C34 /* KMDetailsViewModel.swift in Sources */,
 				03D139582B27573B00248EB6 /* KMProfileViewController.swift in Sources */,
 				03D1390D2B27447B00248EB6 /* AppDelegate.swift in Sources */,
 				03D1395E2B27578000248EB6 /* KMJourneyViewModel.swift in Sources */,
@@ -457,7 +461,7 @@
 				03D139472B274DD600248EB6 /* KMTabController.swift in Sources */,
 				03D139602B27579100248EB6 /* KMEducationViewController.swift in Sources */,
 				03D1394B2B27562200248EB6 /* KMJourneyCoordinator.swift in Sources */,
-				03BC8DB02B28C9FA000D09F6 /* KMProfileDetailsViewController.swift in Sources */,
+				03BC8DB02B28C9FA000D09F6 /* KMDetailsViewController.swift in Sources */,
 				03D1390F2B27447B00248EB6 /* SceneDelegate.swift in Sources */,
 				03BC8DBB2B2C6F29000D09F6 /* KMProfileDataSource.swift in Sources */,
 				03BC8DB72B2C6649000D09F6 /* KMProfileImageCell.swift in Sources */,

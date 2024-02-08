@@ -61,9 +61,11 @@ extension KMProfileViewModel {
     func buildBottomSheetConfiguration(type: ProfileContentType) -> KMGenericBottomSheetConfiguration {
         switch type {
         case .personal:
-            return KMGenericBottomSheetConfiguration(text: "personal")
+            return KMGenericBottomSheetConfiguration(text: configuration.details.personalInfo,
+                                                     icon: configuration.details.personalInfoIcon)
         case .professional:
-            return KMGenericBottomSheetConfiguration(text: "professional")
+            return KMGenericBottomSheetConfiguration(text: configuration.details.professionalInfo, 
+                                                     icon: configuration.details.professionalInfoIcon)
         }
     }
     

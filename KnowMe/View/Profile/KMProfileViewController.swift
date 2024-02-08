@@ -3,8 +3,7 @@
 //  KnowMe
 //
 //  Created by Vanessa Hurla on 11/12/2023.
-//
-
+//  
 import UIKit
 
 class KMProfileViewController: UIViewController {
@@ -47,11 +46,9 @@ class KMProfileViewController: UIViewController {
     
     //MARK: View Model
     let viewModel: KMProfileViewModel
-    let detailsViewController: KMProfileDetailsViewController
     
-    init(viewModel: KMProfileViewModel, detailsViewController: KMProfileDetailsViewController) {
+    init(viewModel: KMProfileViewModel) {
         self.viewModel = viewModel
-        self.detailsViewController = detailsViewController
         super.init(nibName: nil, bundle: nil)
         self.viewModel.delegate = self
     }
@@ -62,23 +59,10 @@ class KMProfileViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        view.backgroundColor = .systemBackground
+        view.backgroundColor = .backgroundPrimary
         viewModel.loadData()
         setupUI()
-//        profileDetailsViewController()
-//        print(KMStringKeys.title.localised)
     }
-    
-//    @objc func profileDetailsViewController() {
-//        let detailsviewController = KMProfileDetailsViewController()
-//        
-//        if let sheet = detailsviewController.sheetPresentationController {
-//            sheet.detents = [.medium(), .large()]
-//            sheet.preferredCornerRadius = 30
-//            sheet.prefersGrabberVisible = true
-//        }
-//        present(detailsviewController, animated: true, completion: nil)
-//    }
 }
 
     //MARK: Delegate
