@@ -6,8 +6,11 @@
 //
 
 import UIKit
+import Lottie
 
 class KMDetailsViewController: UIViewController {
+    
+    private var animationView = LottieAnimationView()
     
     private var mainStackView: UIStackView = {
         let stackView = UIStackView()
@@ -17,20 +20,16 @@ class KMDetailsViewController: UIViewController {
         stackView.translatesAutoresizingMaskIntoConstraints = false
         return stackView
     }()
-    private var iconImageView: UIImageView = {
-        let imageView = UIImageView()
-        imageView.contentMode = .scaleAspectFit
-        imageView.backgroundColor = .clear
-        return imageView
-    }()
+    
     private var detailsTextLabel: UILabel = {
         let label = UILabel()
-        label.font = UIFont.systemFont(ofSize: 17, weight: .regular)
+        label.font = UIFont.systemFont(ofSize: 18, weight: .semibold)
         label.numberOfLines = 0
-        label.textColor = .mainText
+        label.textColor = .white
         label.textAlignment = .natural
         return label
     }()
+        
     
     let viewModel: KMDetailsViewModel
     
@@ -47,25 +46,36 @@ class KMDetailsViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         navigationController?.isNavigationBarHidden = true
-        view.backgroundColor = .backgroundDetails
+        view.backgroundColor = .personalCellColour
         viewModel.loadData()
         setupUI()
         
+        animationView.frame = view.bounds
+        animationView.play()
+        animationView.loopMode = .loop
     }
 }
 
 extension KMDetailsViewController: KMGenericBottomSheetDelegate {
-    func didReceiveContent(text: String, icon: String) {
+    func didReceiveContent(text: String, animation: String, type: ProfileContentType) {
         detailsTextLabel.text = text
-        iconImageView.image = UIImage(named: icon)
+        
+        switch type {
+        case .personal:
+            view.backgroundColor = .personalCellColour
+            detailsTextLabel.textColor = .white
+            animationView = .init(name: "personal-animation")
+        case .professional:
+            view.backgroundColor = .professionalCellColour
+            detailsTextLabel.textColor = .white
+            animationView = .init(name: "professional-animation")
+
+        }
     }
 }
 
 extension KMDetailsViewController {
     func setupUI() {
-        
-        
-
         setupViews()
         setupLayout()
         stackViewIndentation()
@@ -73,7 +83,7 @@ extension KMDetailsViewController {
     
     func setupViews() {
         view.addSubview(mainStackView)
-        mainStackView.addArrangedSubview(iconImageView)
+        mainStackView.addArrangedSubview(animationView)
         mainStackView.addArrangedSubview(detailsTextLabel)
     }
     
@@ -84,9 +94,10 @@ extension KMDetailsViewController {
             mainStackView.topAnchor.constraint(equalTo: view.topAnchor),
             mainStackView.bottomAnchor.constraint(equalTo: view.bottomAnchor),
             
-            iconImageView.leadingAnchor.constraint(equalTo: mainStackView.leadingAnchor, constant: 5),
-            iconImageView.widthAnchor.constraint(equalToConstant: 70),
-            iconImageView.heightAnchor.constraint(equalToConstant: 70)
+            animationView.leadingAnchor.constraint(equalTo: mainStackView.leadingAnchor, constant: 0),
+            animationView.topAnchor.constraint(equalTo: mainStackView.topAnchor, constant: 80),
+            animationView.widthAnchor.constraint(equalToConstant: 200),
+            animationView.heightAnchor.constraint(equalToConstant: 200)
         ])
     }
     
@@ -97,6 +108,4 @@ extension KMDetailsViewController {
                                                                          bottom: 16,
                                                                          trailing: 16)
     }
-    
-
 }

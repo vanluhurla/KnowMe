@@ -9,11 +9,12 @@ import Foundation
 
 struct KMGenericBottomSheetConfiguration {
     let text: String
-    let icon: String
+    let animation: String
+    let type: ProfileContentType
 }
 
 protocol KMGenericBottomSheetDelegate: AnyObject {
-    func didReceiveContent(text: String, icon: String)
+    func didReceiveContent(text: String, animation: String, type: ProfileContentType)
 }
 
 class KMDetailsViewModel: NSObject {
@@ -28,6 +29,6 @@ class KMDetailsViewModel: NSObject {
     }
     
     func loadData() {
-        delegate?.didReceiveContent(text: configuration.text, icon: configuration.icon)
+        delegate?.didReceiveContent(text: configuration.text, animation: configuration.animation, type: configuration.type)
     }
 }

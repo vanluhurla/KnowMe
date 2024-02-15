@@ -17,7 +17,6 @@ class KMProfileContentCell: UICollectionViewCell {
     private var detailsTextViewCell: UIView = {
         let view = UIView()
         view.translatesAutoresizingMaskIntoConstraints = false
-        view.backgroundColor = .backgroundDetails
         view.layer.cornerRadius = 15
         return view
     }()
@@ -33,12 +32,13 @@ class KMProfileContentCell: UICollectionViewCell {
         let imageView = UIImageView()
         imageView.contentMode = .scaleAspectFit
         imageView.backgroundColor = .clear
+        imageView.clipsToBounds = true
         return imageView
     }()
     private var profileTextLabel: UILabel = {
         let label = UILabel()
-        label.font = UIFont.systemFont(ofSize: 17, weight: .regular)
-        label.textColor = .mainText
+        label.font = UIFont.systemFont(ofSize: 18, weight: .semibold)
+        label.textColor = .personalIconColour
         label.numberOfLines = 2
         label.textAlignment = .natural
         return label
@@ -47,7 +47,7 @@ class KMProfileContentCell: UICollectionViewCell {
         let button = UIButton()
         button.translatesAutoresizingMaskIntoConstraints = false
         button.setTitle("Read more", for: .normal)
-        button.titleLabel?.font = .systemFont(ofSize: 15, weight: .bold)
+        button.titleLabel?.font = .systemFont(ofSize: 14, weight: .bold)
         button.contentHorizontalAlignment = .right
         button.backgroundColor = .clear
         return button
@@ -82,8 +82,6 @@ class KMProfileContentCell: UICollectionViewCell {
 private extension KMProfileContentCell {
     func setupValues(item: ProfileContent) {
         profileTextLabel.text = item.info
-        iconImageView.image = UIImage(named: item.icon)
-
         profileTextCellButton.addTarget(self, action: #selector(didTapReadMeButton), for: .touchUpInside)
     }
     
@@ -92,6 +90,22 @@ private extension KMProfileContentCell {
         layoutViews()
         stackViewIndentation()
         textStackViewIndentation()
+        setupAppearanceColor()
+    }
+    
+    func setupAppearanceColor() {
+        switch contentType {
+        case .personal:
+            detailsTextViewCell.backgroundColor = .personalCellColour
+            profileTextLabel.textColor = .white
+            iconImageView.image = UIImage(named: "personal-information")?.withTintColor(.white)
+        case .professional:
+            detailsTextViewCell.backgroundColor = .professionalCellColour
+            profileTextLabel.textColor = .white
+            iconImageView.image = UIImage(named: "professional-information")?.withTintColor(.white)
+        default:
+            return
+        }
     }
     
     func setupViews() {
@@ -120,8 +134,8 @@ private extension KMProfileContentCell {
             
             
             iconImageView.leadingAnchor.constraint(equalTo: textStackView.leadingAnchor, constant: 0),
-            iconImageView.widthAnchor.constraint(equalToConstant: 60),
-            iconImageView.heightAnchor.constraint(equalToConstant: 60),
+            iconImageView.widthAnchor.constraint(equalToConstant: 45),
+            iconImageView.heightAnchor.constraint(equalToConstant: 45),
             
             profileTextCellButton.leadingAnchor.constraint(equalTo: mainStackView.leadingAnchor, constant: 16),
             profileTextCellButton.trailingAnchor.constraint(equalTo: mainStackView.trailingAnchor, constant: -16),
@@ -153,15 +167,6 @@ private extension KMProfileContentCell {
         delegate?.didTapReadMoreButton(type: contentType)
     }
 }
-
-//private extension UIImage {
-//    func resize(to size: CGSize) -> UIImage? {
-//        let renderer = UIGraphicsImageRenderer(size: size)
-//        return renderer.image { _ in
-//            self.draw(in: CGRect(origin: .zero, size: size))
-//        }
-//    }
-//}
 
 
 
