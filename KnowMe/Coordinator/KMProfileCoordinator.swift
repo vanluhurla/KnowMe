@@ -32,8 +32,11 @@ class KMProfileCoordinator {
 extension KMProfileCoordinator: KMProfileViewModelCoordinator {
     func presentBottomSheet(with configuration: KMGenericBottomSheetConfiguration) {
         let viewController = viewFactory.profileDetailsBottomSheet(configuration: configuration)
+        
+        if let sheet = viewController.sheetPresentationController {
+            sheet.detents = [.large()]
+        }
         navigationController.present(viewController, animated: true)
     }
 }
 
-//present(UIViewController(), animated: true, completion: nil)

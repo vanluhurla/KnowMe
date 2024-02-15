@@ -47,3 +47,5 @@ struct ProfileContent: Hashable {
     let info: String
     let icon: String
 }
+
+
