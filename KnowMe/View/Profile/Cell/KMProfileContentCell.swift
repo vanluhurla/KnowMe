@@ -140,7 +140,6 @@ private extension KMProfileContentCell {
             profileTextCellButton.leadingAnchor.constraint(equalTo: mainStackView.leadingAnchor, constant: 16),
             profileTextCellButton.trailingAnchor.constraint(equalTo: mainStackView.trailingAnchor, constant: -16),
             profileTextCellButton.bottomAnchor.constraint(equalTo: mainStackView.bottomAnchor, constant: 16)
-            
         ])
     }
     

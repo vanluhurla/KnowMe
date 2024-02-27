@@ -11,6 +11,6 @@ struct KMProfileDetails {
     let animation: String = "hello"
     let personalInfoIcon: String = "personal-information"
     let professionalInfoIcon: String = "professional-information"
-    let personalInfo = KMProfileStringKeys.firstCell.localised
-    let professionalInfo = KMProfileStringKeys.secondCell.localised
+    let personalInfo = KMProfileStringKeys.personalContentCell.localised
+    let professionalInfo = KMProfileStringKeys.professionalContentCell.localised
 }

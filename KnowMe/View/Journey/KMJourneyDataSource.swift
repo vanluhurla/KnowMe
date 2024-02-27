@@ -13,6 +13,15 @@ typealias KMJourneySnapshot = NSDiffableDataSourceSnapshot<JourneySection, Journ
 
 enum JourneySection: Int, CaseIterable {
     case animation, card
+    
+    var sectionTitle: String {
+        switch self {
+        case .animation:
+            return KMJourneyStringKeys.journeyMainTitle.localised
+        case .card:
+            return KMJourneyStringKeys.personalProjectsTitle.localised
+        }
+    }
 }
 
 enum JourneyItem: Hashable {

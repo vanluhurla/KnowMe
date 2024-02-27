@@ -8,10 +8,10 @@
 import Foundation
 
 enum KMProfileStringKeys: String {
-    case firstTitle = "hello"
-    case secondTitle = "about"
-    case firstCell = "personal"
-    case secondCell = "professional"
+    case helloTitle = "hello"
+    case aboutTitle = "about"
+    case personalContentCell = "personal"
+    case professionalContentCell = "professional"
     
     var localised: String {
         NSLocalizedString(self.rawValue, comment: "")

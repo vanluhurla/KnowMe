@@ -35,41 +35,41 @@ private extension KMJourneyCollectionViewLayout {
         
         let section = NSCollectionLayoutSection(group: group)
         
-//        let footerHeaderSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(1.0), heightDimension: .estimated(20.0))
-//        let header = NSCollectionLayoutBoundarySupplementaryItem(
-//            layoutSize: footerHeaderSize,
-//            elementKind: UICollectionView.elementKindSectionHeader,
-//            alignment: .top)
-//        section.boundarySupplementaryItems = [header]
+        let footerHeaderSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(1.0), heightDimension: .estimated(20.0))
+        let header = NSCollectionLayoutBoundarySupplementaryItem(
+            layoutSize: footerHeaderSize,
+            elementKind: UICollectionView.elementKindSectionHeader,
+            alignment: .top)
+        section.boundarySupplementaryItems = [header]
         
         section.interGroupSpacing = 10
-        section.contentInsets = NSDirectionalEdgeInsets(top: 20, leading: 10, bottom: 25, trailing: 10)
+        section.contentInsets = NSDirectionalEdgeInsets(top: 20, leading: 10, bottom: 50, trailing: 10)
         
         return section
     }
     
-        static func journeyCardCarousel() -> NSCollectionLayoutSection? {
-            let journeyCardSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(1.0),
-                                                         heightDimension: .fractionalHeight(0.7))
-            let journeyCardCell = NSCollectionLayoutItem(layoutSize: journeyCardSize)
-            
-            let groupSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(0.8), heightDimension: .fractionalHeight(0.5))
-            let group = NSCollectionLayoutGroup.horizontal(layoutSize: groupSize, subitems: [journeyCardCell])
-            
-            let section = NSCollectionLayoutSection(group: group)
-            
-            section.orthogonalScrollingBehavior = .groupPaging
-            
-            //        let footerHeaderSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(1.0), heightDimension: .estimated(20.0))
-            //        let header = NSCollectionLayoutBoundarySupplementaryItem(
-            //            layoutSize: footerHeaderSize,
-            //            elementKind: UICollectionView.elementKindSectionHeader,
-            //            alignment: .top)
-            //        section.boundarySupplementaryItems = [header]
-            
-            section.interGroupSpacing = 10
-            section.contentInsets = NSDirectionalEdgeInsets(top: 20, leading: 10, bottom: 25, trailing: 10)
-            
-            return section
-        }
+    static func journeyCardCarousel() -> NSCollectionLayoutSection? {
+        let journeyCardSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(1.0),
+                                                     heightDimension: .fractionalHeight(0.7))
+        let journeyCardCell = NSCollectionLayoutItem(layoutSize: journeyCardSize)
+        
+        let groupSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(0.8), heightDimension: .fractionalHeight(0.5))
+        let group = NSCollectionLayoutGroup.horizontal(layoutSize: groupSize, subitems: [journeyCardCell])
+        
+        let section = NSCollectionLayoutSection(group: group)
+        
+        section.orthogonalScrollingBehavior = .groupPaging
+        
+        let footerHeaderSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(1.0), heightDimension: .estimated(20.0))
+        let header = NSCollectionLayoutBoundarySupplementaryItem(
+            layoutSize: footerHeaderSize,
+            elementKind: UICollectionView.elementKindSectionHeader,
+            alignment: .top)
+        section.boundarySupplementaryItems = [header]
+        
+        section.interGroupSpacing = 10
+        section.contentInsets = NSDirectionalEdgeInsets(top: 50, leading: 10, bottom: 0, trailing: 10)
+        
+        return section
+    }
 }

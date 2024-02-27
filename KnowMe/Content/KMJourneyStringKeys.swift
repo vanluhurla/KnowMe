@@ -8,6 +8,8 @@
 import Foundation
 
 enum KMJourneyStringKeys: String {
+    case journeyMainTitle = "journeyMainTitle"
+    case personalProjectsTitle = "personalProjects"
     case goodchefCardContent = "goodChef"
     case ourrecipesCardContent = "ourRecipes"
     case todaynotesCardContent = "todaysNotes"

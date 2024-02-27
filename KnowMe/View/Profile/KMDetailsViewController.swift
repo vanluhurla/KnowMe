@@ -29,7 +29,7 @@ class KMDetailsViewController: UIViewController {
         label.textAlignment = .natural
         return label
     }()
-        
+    
     let viewModel: KMDetailsViewModel
     
     init(viewModel: KMDetailsViewModel) {
