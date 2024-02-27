@@ -12,13 +12,13 @@ typealias KMProfileSnapshot = NSDiffableDataSourceSnapshot<ProfileSection, Profi
 
 
 enum ProfileSection: Int, CaseIterable {
-    case image
+    case animation
     case personalInfo
     case professionalInfo
     
     var sectionTitle: String {
         switch self {
-        case .image:
+        case .animation:
             return KMProfileStringKeys.firstTitle.localised
         case .personalInfo:
             return KMProfileStringKeys.secondTitle.localised
@@ -33,13 +33,13 @@ enum ProfileContentType {
 }
 
 enum ProfileItem: Hashable {
-    case image(ProfileImageItem)
+    case animation(ProfileAnimationItem)
     case personalInfo(ProfileContent)
     case professionalInfo(ProfileContent)
 }
 
-struct ProfileImageItem: Hashable {
-    let image: String
+struct ProfileAnimationItem: Hashable {
+    let animation: String
 }
 
 struct ProfileContent: Hashable {

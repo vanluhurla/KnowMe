@@ -36,9 +36,9 @@ class KMProfileViewModel: NSObject {
 }
 
 extension KMProfileViewModel {
-    func buildImageItem() -> [ProfileItem] {
-        let imageItem = ProfileImageItem(image: configuration.details.image)
-        let item = ProfileItem.image(imageItem)
+    func buildAnimationItem() -> [ProfileItem] {
+        let animationItem = ProfileAnimationItem(animation: configuration.details.animation)
+        let item = ProfileItem.animation(animationItem)
         return [item]
     }
     

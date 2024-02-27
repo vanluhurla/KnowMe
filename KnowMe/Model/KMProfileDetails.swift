@@ -8,7 +8,7 @@
 import UIKit
 
 struct KMProfileDetails {
-    let image: String = "vanessa_profile"
+    let animation: String = "hello"
     let personalInfoIcon: String = "personal-information"
     let professionalInfoIcon: String = "professional-information"
     let personalInfo = KMProfileStringKeys.firstCell.localised

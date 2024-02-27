@@ -12,6 +12,17 @@
         }
       }
     },
+    "goodChef" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "GoodChef is an intuitive recipe app, featuring a user-friendly interface, a collection of Featured and\nCategorised Recipes.\n\nMy contribution and learning process:\n\n• MVVM-C Pattern: I learned to follow the MVVM-C design pattern for code organisation and separation of concerns, which allowed for effective management of navigation, data retrieval, and presentation in the app.\n\n• Coordinator and Factory: I worked with coordinate navigation and screen flow, following the Coordinator. I also, created a factory for view controllers, promoting code separation and reusability.\n\n• Networking and Error Handling: I gained insight into handling network operations, including making HTTP requests using URLSession. Including handling network errors with URLSession and JSON decoding using Codable objects.\n\n• Other things I learned about: UIKit, Protocols, Typealiases, Enumerations, UICollectionViewCompositionalLayout, UICollectionViewDiffableDataSource and Structs."
+          }
+        }
+      }
+    },
     "hello" : {
       "extractionState" : "manual",
       "localizations" : {
@@ -19,6 +30,50 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Hi, I'm Vanessa!"
+          }
+        }
+      }
+    },
+    "journeyFirstTitle" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Good Chef App"
+          }
+        }
+      }
+    },
+    "journeySecondTitle" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Our Recipes App"
+          }
+        }
+      }
+    },
+    "journeyThirdTitle" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Today's Notes App"
+          }
+        }
+      }
+    },
+    "ourRecipes" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "OurRecipes is an easy-to-use recipe app. It offers a user-friendly interface, a variety of  recipes, and detailed recipe views.  My contribution and learning process:  \n* MVC Pattern: I was able to gain hands-on experience in effectively managing view controllers and delved into the world of UITableView, mastering its implementation to present recipe data in a structured and organised manner. This entailed setting up data source and delegate methods to ensure smooth table view operations.  \n* Network Operations and JSON Parsing: My role involved understanding and implementing network requests asynchronously using the powerful URLSession. I, also, played a key role in parsing JSON data retrieved from the network in Codable structures using diverse decoding strategies. \n\n* Other things I learned about: Protocols, UIRefreshControl Integration, Data Sorting, Navigation Flow, Custom UITableViewCell, UIImageView Extension, Date Formatting, Table View Management and Structs. "
           }
         }
       }
@@ -41,6 +96,17 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "I am a passionate and enthusiastic iOS developer in search of my first opportunity in the field following a career change.\n \nI strongly believe that technology should be used to improve and facilitate people's lives, and I am eager to contribute to this endeavour. I love writing code, collaborating with teams, building beautiful interfaces, and delivering incredible user experiences. \n\nMost importantly, I take joy in learning at each step of my journey.\n Having invested a considerable amount of time in learning code and processes, I am confident that I am ready to start on a full-time iOS development journey. "
+          }
+        }
+      }
+    },
+    "todaysNotes" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "TodaysNotes is a straightforward note-taking app, developed using Swift MVC \narchitecture. It offers a user-friendly interface for creating and deleting notes with ease. \n\nMy contribution and learning process: \n* Navigation and Presentation: I contributed to the navigation flow by implementing a function, which allows users to view and edit note details. This function utilises storyboards for view controller instantiation and navigation.  \n* Data Management: I actively participated in managing notes using the NoteManager class. This class handles note storage, retrieval, deletion, and replacement, making it a crucial component of the app's data management.  \n* User Defaults Usage and Note Editing View: I learned to use UserDefaults for storing and retrieving notes, enabling persistent data storage and I worked on the NoteDetailsViewController, which allows users to create and edit notes. This view controller includes text view placeholders, dynamic text view resizing, and efficient note saving and updating.  \n* Other things I learned about: Protocols, UIViewController Setup, UITableView Implementation, Custom UITableViewCel, Delegate Implementation, User Interface Enhancement and Structs. "
           }
         }
       }

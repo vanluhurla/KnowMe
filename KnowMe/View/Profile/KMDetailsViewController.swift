@@ -30,7 +30,6 @@ class KMDetailsViewController: UIViewController {
         return label
     }()
         
-    
     let viewModel: KMDetailsViewModel
     
     init(viewModel: KMDetailsViewModel) {
@@ -49,10 +48,6 @@ class KMDetailsViewController: UIViewController {
         view.backgroundColor = .personalCellColour
         viewModel.loadData()
         setupUI()
-        
-        animationView.frame = view.bounds
-        animationView.play()
-        animationView.loopMode = .loop
     }
 }
 
@@ -69,7 +64,6 @@ extension KMDetailsViewController: KMGenericBottomSheetDelegate {
             view.backgroundColor = .professionalCellColour
             detailsTextLabel.textColor = .white
             animationView = .init(name: "professional-animation")
-
         }
     }
 }
@@ -79,6 +73,13 @@ extension KMDetailsViewController {
         setupViews()
         setupLayout()
         stackViewIndentation()
+        setupAnimation()
+    }
+    
+    func setupAnimation(){
+        animationView.frame = view.bounds
+        animationView.play()
+        animationView.loopMode = .loop
     }
     
     func setupViews() {

@@ -9,11 +9,38 @@ import UIKit
 
 class KMJourneyViewController: UIViewController {
     
+    private var collectionView: UICollectionView = {
+        let layout = KMJourneyCollectionViewLayout.layout()
+        let collectionView = UICollectionView(frame: .zero, collectionViewLayout: layout)
+        collectionView.backgroundColor = .clear
+        collectionView.translatesAutoresizingMaskIntoConstraints = false
+        collectionView.contentInset = UIEdgeInsets(top: 10, left: 0, bottom: 10, right: 0)
+        collectionView.register(KMJourneyAnimationCell.self, forCellWithReuseIdentifier: KMJourneyAnimationCell.identifier)
+        collectionView.register(KMJourneyCardCell.self, forCellWithReuseIdentifier: KMJourneyCardCell.identifier)
+        return collectionView
+    }()
+    
+    private lazy var dataSource: KMJourneyDataSource = {
+        let dataSource = KMJourneyDataSource(collectionView: collectionView) { [weak self] collectionView, indexPath, itemIdentifier in
+            guard let self else {
+                return UICollectionViewCell()
+            }
+            switch itemIdentifier {
+            case .animation(let item):
+                return journeyAnimation(collectionView: collectionView, indexPaht: indexPath, item: item)
+            case .card(let item):
+                return journeyCardCell(collectionView: collectionView, indexPath: indexPath, item: item)
+            }
+        }
+        return dataSource
+    }()
+    
     let viewModel: KMJourneyViewModel
     
     init(viewModel: KMJourneyViewModel) {
         self.viewModel = viewModel
         super.init(nibName: nil, bundle: nil)
+        self.viewModel.delegate = self
     }
     
     required init?(coder: NSCoder) {
@@ -22,6 +49,62 @@ class KMJourneyViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        view.backgroundColor = .backgroundPersonalCell
+        view.backgroundColor = .backgroundPrimary
+        viewModel.loadData()
+        setupUI()
+    }
+}
+extension KMJourneyViewController: KMJourneyViewModelDelegate {
+    func didReceiveJourneyDetails() {
+        applySnapshot()
+    }
+}
+
+extension KMJourneyViewController {
+    func setupUI() {
+        setupView()
+        layoutView()
+    }
+    
+    func setupView() {
+        view.addSubview(collectionView)
+    }
+    
+    func layoutView() {
+        NSLayoutConstraint.activate([
+            collectionView.topAnchor.constraint(equalTo: view.topAnchor),
+            collectionView.leftAnchor.constraint(equalTo: view.leftAnchor),
+            collectionView.bottomAnchor.constraint(equalTo: view.bottomAnchor),
+            collectionView.rightAnchor.constraint(equalTo: view.rightAnchor)
+        ])
+    }
+    
+    func applySnapshot() {
+        var snapshot = KMJourneySnapshot()
+        snapshot.appendSections(JourneySection.allCases)
+        snapshot.appendItems(viewModel.buildAnimationItem(), toSection: JourneySection.animation)
+        snapshot.appendItems(viewModel.buildGoodchefCardItem(), toSection: JourneySection.card)
+        snapshot.appendItems(viewModel.buildOurrecipesCardItem(), toSection: JourneySection.card)
+        snapshot.appendItems(viewModel.buildTodaysnotesCardItem(), toSection: JourneySection.card)
+
+        dataSource.apply(snapshot)
+    }
+}
+
+private extension KMJourneyViewController {
+    func journeyAnimation(collectionView: UICollectionView, indexPaht: IndexPath, item: JourneyAnimationItem) -> UICollectionViewCell {
+        guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: KMJourneyAnimationCell.identifier, for: indexPaht) as? KMJourneyAnimationCell else {
+            return UICollectionViewCell()
+        }
+        cell.setupCellContent()
+        return cell
+    }
+    
+    func journeyCardCell(collectionView: UICollectionView, indexPath: IndexPath, item: JourneyCard) -> UICollectionViewCell {
+        guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: KMJourneyCardCell.identifier, for: indexPath) as? KMJourneyCardCell else {
+            return UICollectionViewCell()
+        }
+        cell.setupCellContent(item: item)
+        return cell
     }
 }
