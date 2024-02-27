@@ -13,7 +13,7 @@
 		030F61E32B30B15E00911E8D /* KMProfileHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 030F61E22B30B15E00911E8D /* KMProfileHeader.swift */; };
 		030F61E72B31F46000911E8D /* KMProfileContentCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 030F61E62B31F46000911E8D /* KMProfileContentCell.swift */; };
 		03BC8DB02B28C9FA000D09F6 /* KMDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03BC8DAF2B28C9FA000D09F6 /* KMDetailsViewController.swift */; };
-		03BC8DB72B2C6649000D09F6 /* KMProfileImageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03BC8DB62B2C6649000D09F6 /* KMProfileImageCell.swift */; };
+		03BC8DB72B2C6649000D09F6 /* KMProfileAnimationCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03BC8DB62B2C6649000D09F6 /* KMProfileAnimationCell.swift */; };
 		03BC8DB92B2C6ED4000D09F6 /* KMProfileCollectionViewLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03BC8DB82B2C6ED4000D09F6 /* KMProfileCollectionViewLayout.swift */; };
 		03BC8DBB2B2C6F29000D09F6 /* KMProfileDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03BC8DBA2B2C6F29000D09F6 /* KMProfileDataSource.swift */; };
 		03BD947F2B482A7B00700C34 /* KMColours.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03BD947E2B482A7B00700C34 /* KMColours.swift */; };
@@ -21,6 +21,14 @@
 		03C5EF2A2B7CE8EC00D229A8 /* Lottie in Frameworks */ = {isa = PBXBuildFile; productRef = 03C5EF292B7CE8EC00D229A8 /* Lottie */; };
 		03C5EF362B7E264400D229A8 /* personal-animation.json in Resources */ = {isa = PBXBuildFile; fileRef = 03C5EF352B7E264400D229A8 /* personal-animation.json */; };
 		03C5EF382B7E26CF00D229A8 /* professional-animation.json in Resources */ = {isa = PBXBuildFile; fileRef = 03C5EF372B7E26CF00D229A8 /* professional-animation.json */; };
+		03C5EF3B2B7E551600D229A8 /* KMJourneyAnimationCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03C5EF3A2B7E551600D229A8 /* KMJourneyAnimationCell.swift */; };
+		03C5EF3D2B7E5C1400D229A8 /* journey-main.json in Resources */ = {isa = PBXBuildFile; fileRef = 03C5EF3C2B7E5C1400D229A8 /* journey-main.json */; };
+		03C5EF3F2B7E61E900D229A8 /* KMJourneyCollectionViewLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03C5EF3E2B7E61E900D229A8 /* KMJourneyCollectionViewLayout.swift */; };
+		03C5EF412B7E651B00D229A8 /* KMJourneyDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03C5EF402B7E651B00D229A8 /* KMJourneyDataSource.swift */; };
+		03C5EF432B7E75E600D229A8 /* KMJourneyDetails.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03C5EF422B7E75E600D229A8 /* KMJourneyDetails.swift */; };
+		03C5EF452B7E7EF300D229A8 /* hello.json in Resources */ = {isa = PBXBuildFile; fileRef = 03C5EF442B7E7EF300D229A8 /* hello.json */; };
+		03C5EF472B83A3B400D229A8 /* KMJourneyCardCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03C5EF462B83A3B400D229A8 /* KMJourneyCardCell.swift */; };
+		03C5EF492B83B18600D229A8 /* KMJourneyStringKeys.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03C5EF482B83B18600D229A8 /* KMJourneyStringKeys.swift */; };
 		03D1390D2B27447B00248EB6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03D1390C2B27447B00248EB6 /* AppDelegate.swift */; };
 		03D1390F2B27447B00248EB6 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03D1390E2B27447B00248EB6 /* SceneDelegate.swift */; };
 		03D139162B27447D00248EB6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 03D139152B27447D00248EB6 /* Assets.xcassets */; };
@@ -72,13 +80,21 @@
 		030F61E22B30B15E00911E8D /* KMProfileHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KMProfileHeader.swift; sourceTree = "<group>"; };
 		030F61E62B31F46000911E8D /* KMProfileContentCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KMProfileContentCell.swift; sourceTree = "<group>"; };
 		03BC8DAF2B28C9FA000D09F6 /* KMDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KMDetailsViewController.swift; sourceTree = "<group>"; };
-		03BC8DB62B2C6649000D09F6 /* KMProfileImageCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KMProfileImageCell.swift; sourceTree = "<group>"; };
+		03BC8DB62B2C6649000D09F6 /* KMProfileAnimationCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KMProfileAnimationCell.swift; sourceTree = "<group>"; };
 		03BC8DB82B2C6ED4000D09F6 /* KMProfileCollectionViewLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KMProfileCollectionViewLayout.swift; sourceTree = "<group>"; };
 		03BC8DBA2B2C6F29000D09F6 /* KMProfileDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KMProfileDataSource.swift; sourceTree = "<group>"; };
 		03BD947E2B482A7B00700C34 /* KMColours.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KMColours.swift; sourceTree = "<group>"; };
 		03BD94812B63C90900700C34 /* KMDetailsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KMDetailsViewModel.swift; sourceTree = "<group>"; };
 		03C5EF352B7E264400D229A8 /* personal-animation.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "personal-animation.json"; sourceTree = "<group>"; };
 		03C5EF372B7E26CF00D229A8 /* professional-animation.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "professional-animation.json"; sourceTree = "<group>"; };
+		03C5EF3A2B7E551600D229A8 /* KMJourneyAnimationCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KMJourneyAnimationCell.swift; sourceTree = "<group>"; };
+		03C5EF3C2B7E5C1400D229A8 /* journey-main.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "journey-main.json"; sourceTree = "<group>"; };
+		03C5EF3E2B7E61E900D229A8 /* KMJourneyCollectionViewLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KMJourneyCollectionViewLayout.swift; sourceTree = "<group>"; };
+		03C5EF402B7E651B00D229A8 /* KMJourneyDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KMJourneyDataSource.swift; sourceTree = "<group>"; };
+		03C5EF422B7E75E600D229A8 /* KMJourneyDetails.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KMJourneyDetails.swift; sourceTree = "<group>"; };
+		03C5EF442B7E7EF300D229A8 /* hello.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = hello.json; sourceTree = "<group>"; };
+		03C5EF462B83A3B400D229A8 /* KMJourneyCardCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KMJourneyCardCell.swift; sourceTree = "<group>"; };
+		03C5EF482B83B18600D229A8 /* KMJourneyStringKeys.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KMJourneyStringKeys.swift; sourceTree = "<group>"; };
 		03D139092B27447B00248EB6 /* KnowMe.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = KnowMe.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		03D1390C2B27447B00248EB6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		03D1390E2B27447B00248EB6 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -140,6 +156,7 @@
 			isa = PBXGroup;
 			children = (
 				030F61D62B2CB3FD00911E8D /* KMProfileDetails.swift */,
+				03C5EF422B7E75E600D229A8 /* KMJourneyDetails.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -148,6 +165,7 @@
 			isa = PBXGroup;
 			children = (
 				030F61E02B30A5F800911E8D /* KMProfileStringKeys.swift */,
+				03C5EF482B83B18600D229A8 /* KMJourneyStringKeys.swift */,
 			);
 			path = Content;
 			sourceTree = "<group>";
@@ -156,7 +174,7 @@
 			isa = PBXGroup;
 			children = (
 				030F61E22B30B15E00911E8D /* KMProfileHeader.swift */,
-				03BC8DB62B2C6649000D09F6 /* KMProfileImageCell.swift */,
+				03BC8DB62B2C6649000D09F6 /* KMProfileAnimationCell.swift */,
 				030F61E62B31F46000911E8D /* KMProfileContentCell.swift */,
 			);
 			path = Cell;
@@ -168,6 +186,15 @@
 				03BD947E2B482A7B00700C34 /* KMColours.swift */,
 			);
 			path = Design;
+			sourceTree = "<group>";
+		};
+		03C5EF392B7E381F00D229A8 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				03C5EF3A2B7E551600D229A8 /* KMJourneyAnimationCell.swift */,
+				03C5EF462B83A3B400D229A8 /* KMJourneyCardCell.swift */,
+			);
+			path = Cells;
 			sourceTree = "<group>";
 		};
 		03D139002B27447B00248EB6 = {
@@ -203,6 +230,8 @@
 				03D139152B27447D00248EB6 /* Assets.xcassets */,
 				03C5EF352B7E264400D229A8 /* personal-animation.json */,
 				03C5EF372B7E26CF00D229A8 /* professional-animation.json */,
+				03C5EF3C2B7E5C1400D229A8 /* journey-main.json */,
+				03C5EF442B7E7EF300D229A8 /* hello.json */,
 				03D139172B27447D00248EB6 /* LaunchScreen.storyboard */,
 				03D1391A2B27447D00248EB6 /* Info.plist */,
 				030F61DA2B309EEA00911E8D /* Localizable.xcstrings */,
@@ -287,6 +316,9 @@
 		03D139532B2756DF00248EB6 /* Journey */ = {
 			isa = PBXGroup;
 			children = (
+				03C5EF392B7E381F00D229A8 /* Cells */,
+				03C5EF402B7E651B00D229A8 /* KMJourneyDataSource.swift */,
+				03C5EF3E2B7E61E900D229A8 /* KMJourneyCollectionViewLayout.swift */,
 				03D1395D2B27578000248EB6 /* KMJourneyViewModel.swift */,
 				03D1395B2B27576600248EB6 /* KMJourneyViewController.swift */,
 			);
@@ -431,6 +463,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				03C5EF362B7E264400D229A8 /* personal-animation.json in Resources */,
+				03C5EF3D2B7E5C1400D229A8 /* journey-main.json in Resources */,
+				03C5EF452B7E7EF300D229A8 /* hello.json in Resources */,
 				03D139192B27447D00248EB6 /* LaunchScreen.storyboard in Resources */,
 				03D139162B27447D00248EB6 /* Assets.xcassets in Resources */,
 				03C5EF382B7E26CF00D229A8 /* professional-animation.json in Resources */,
@@ -469,18 +503,23 @@
 				03D139622B27579E00248EB6 /* KMEducationViewModel.swift in Sources */,
 				03BD947F2B482A7B00700C34 /* KMColours.swift in Sources */,
 				030F61E12B30A5F800911E8D /* KMProfileStringKeys.swift in Sources */,
+				03C5EF412B7E651B00D229A8 /* KMJourneyDataSource.swift in Sources */,
+				03C5EF492B83B18600D229A8 /* KMJourneyStringKeys.swift in Sources */,
+				03C5EF472B83A3B400D229A8 /* KMJourneyCardCell.swift in Sources */,
 				03D139492B27560100248EB6 /* KMProfileCoordinator.swift in Sources */,
 				03D139682B2757DC00248EB6 /* KMContactViewController.swift in Sources */,
 				030F61D72B2CB3FD00911E8D /* KMProfileDetails.swift in Sources */,
 				03D1395A2B27575300248EB6 /* KMProfileViewModel.swift in Sources */,
 				03D1394F2B27564F00248EB6 /* KMSkillsCoordinator.swift in Sources */,
 				03D139472B274DD600248EB6 /* KMTabController.swift in Sources */,
+				03C5EF432B7E75E600D229A8 /* KMJourneyDetails.swift in Sources */,
 				03D139602B27579100248EB6 /* KMEducationViewController.swift in Sources */,
 				03D1394B2B27562200248EB6 /* KMJourneyCoordinator.swift in Sources */,
 				03BC8DB02B28C9FA000D09F6 /* KMDetailsViewController.swift in Sources */,
 				03D1390F2B27447B00248EB6 /* SceneDelegate.swift in Sources */,
+				03C5EF3B2B7E551600D229A8 /* KMJourneyAnimationCell.swift in Sources */,
 				03BC8DBB2B2C6F29000D09F6 /* KMProfileDataSource.swift in Sources */,
-				03BC8DB72B2C6649000D09F6 /* KMProfileImageCell.swift in Sources */,
+				03BC8DB72B2C6649000D09F6 /* KMProfileAnimationCell.swift in Sources */,
 				03D139512B27567200248EB6 /* KMHobbiesCoordinator.swift in Sources */,
 				030F61E72B31F46000911E8D /* KMProfileContentCell.swift in Sources */,
 				03D139662B2757CB00248EB6 /* KMSkillsViewModel.swift in Sources */,
@@ -489,6 +528,7 @@
 				03D1394D2B27563900248EB6 /* KMEducationCoordinator.swift in Sources */,
 				030F61E32B30B15E00911E8D /* KMProfileHeader.swift in Sources */,
 				03D1396A2B2757ED00248EB6 /* KMContactViewModel.swift in Sources */,
+				03C5EF3F2B7E61E900D229A8 /* KMJourneyCollectionViewLayout.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

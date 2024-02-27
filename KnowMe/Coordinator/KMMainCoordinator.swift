@@ -11,7 +11,7 @@ enum KMTab: Int {
     case profile, journey, education, skills, hobbies
     
     var title: String {
-        switch self{
+        switch self {
         case .profile:
             return "Profile"
         case .journey:

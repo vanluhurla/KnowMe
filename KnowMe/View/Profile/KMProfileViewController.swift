@@ -15,7 +15,7 @@ class KMProfileViewController: UIViewController {
         collectionView.backgroundColor = .clear
         collectionView.translatesAutoresizingMaskIntoConstraints = false
         collectionView.contentInset = UIEdgeInsets(top: 10, left: 0, bottom: 10, right: 0)
-        collectionView.register(KMProfileImageCell.self, forCellWithReuseIdentifier: KMProfileImageCell.identifier)
+        collectionView.register(KMProfileAnimationCell.self, forCellWithReuseIdentifier: KMProfileAnimationCell.identifier)
         collectionView.register(KMProfileHeader.self, forSupplementaryViewOfKind: UICollectionView.elementKindSectionHeader, withReuseIdentifier: KMProfileHeader.identifier)
         collectionView.register(KMProfileContentCell.self, forCellWithReuseIdentifier: KMProfileContentCell.identifier)
         return collectionView
@@ -27,8 +27,8 @@ class KMProfileViewController: UIViewController {
                 return UICollectionViewCell()
             }
             switch itemIdentifier {
-            case .image(let item):
-                return profileImage(collectionView: collectionView, indexPath: indexPath, item: item)
+            case .animation(let item):
+                return profileAnimation(collectionView: collectionView, indexPaht: indexPath, item: item)
             case .personalInfo(let item):
                 return profileContentCell(collectionView: collectionView, indexPath: indexPath, item: item)
             case .professionalInfo(let item):
@@ -96,7 +96,7 @@ extension KMProfileViewController {
     func applySnapshot() {
         var snapshot = KMProfileSnapshot()
         snapshot.appendSections(ProfileSection.allCases)
-        snapshot.appendItems(viewModel.buildImageItem(), toSection: ProfileSection.image)
+        snapshot.appendItems(viewModel.buildAnimationItem(), toSection: ProfileSection.animation)
         snapshot.appendItems(viewModel.buildPersonalItem(), toSection: ProfileSection.personalInfo)
         snapshot.appendItems(viewModel.buildProfessionalItem(), toSection: ProfileSection.professionalInfo)
         dataSource.apply(snapshot)
@@ -105,8 +105,8 @@ extension KMProfileViewController {
 
     //MARK: Cells
 private extension KMProfileViewController {
-    func profileImage(collectionView: UICollectionView, indexPath: IndexPath, item: ProfileImageItem) -> UICollectionViewCell {
-        guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: KMProfileImageCell.identifier, for: indexPath) as? KMProfileImageCell else {
+    func profileAnimation(collectionView: UICollectionView, indexPaht: IndexPath, item: ProfileAnimationItem) -> UICollectionViewCell {
+        guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: KMProfileAnimationCell.identifier, for: indexPaht) as? KMProfileAnimationCell else {
             return UICollectionViewCell()
         }
         cell.setupCellContent()

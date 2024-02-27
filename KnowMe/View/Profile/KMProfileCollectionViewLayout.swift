@@ -11,7 +11,7 @@ struct KMProfileCollectionViewLayout {
     static func layout() -> UICollectionViewCompositionalLayout {
         UICollectionViewCompositionalLayout { sectionIndex, _ -> NSCollectionLayoutSection? in
             switch sectionIndex {
-            case ProfileSection.image.rawValue:
+            case ProfileSection.animation.rawValue:
                 return profileImage()
             case ProfileSection.personalInfo.rawValue:
                 return profileDetailsText()
