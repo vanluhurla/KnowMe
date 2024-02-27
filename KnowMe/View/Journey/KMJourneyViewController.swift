@@ -17,6 +17,7 @@ class KMJourneyViewController: UIViewController {
         collectionView.contentInset = UIEdgeInsets(top: 10, left: 0, bottom: 10, right: 0)
         collectionView.register(KMJourneyAnimationCell.self, forCellWithReuseIdentifier: KMJourneyAnimationCell.identifier)
         collectionView.register(KMJourneyCardCell.self, forCellWithReuseIdentifier: KMJourneyCardCell.identifier)
+        collectionView.register(KMJourneyHeader.self, forSupplementaryViewOfKind: UICollectionView.elementKindSectionHeader, withReuseIdentifier: KMJourneyHeader.identifier)
         return collectionView
     }()
     
@@ -31,6 +32,12 @@ class KMJourneyViewController: UIViewController {
             case .card(let item):
                 return journeyCardCell(collectionView: collectionView, indexPath: indexPath, item: item)
             }
+        }
+        dataSource.supplementaryViewProvider = { [weak self] collectionView, kind, indexPath in
+            guard let self else {
+                return nil
+            }
+            return header(collectionView: collectionView, kind: kind, indexPath: indexPath)
         }
         return dataSource
     }()
@@ -86,12 +93,21 @@ extension KMJourneyViewController {
         snapshot.appendItems(viewModel.buildGoodchefCardItem(), toSection: JourneySection.card)
         snapshot.appendItems(viewModel.buildOurrecipesCardItem(), toSection: JourneySection.card)
         snapshot.appendItems(viewModel.buildTodaysnotesCardItem(), toSection: JourneySection.card)
-
+        
         dataSource.apply(snapshot)
     }
 }
 
 private extension KMJourneyViewController {
+    func header(collectionView: UICollectionView, kind: String, indexPath: IndexPath) -> UICollectionReusableView? {
+        guard let sectionHeader = collectionView.dequeueReusableSupplementaryView(ofKind: kind, withReuseIdentifier: KMJourneyHeader.identifier, for: indexPath) as? KMJourneyHeader,
+              let section = JourneySection(rawValue: indexPath.section) else {
+            return nil
+        }
+        sectionHeader.setupHeader(title: section.sectionTitle)
+        return sectionHeader
+    }
+    
     func journeyAnimation(collectionView: UICollectionView, indexPaht: IndexPath, item: JourneyAnimationItem) -> UICollectionViewCell {
         guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: KMJourneyAnimationCell.identifier, for: indexPaht) as? KMJourneyAnimationCell else {
             return UICollectionViewCell()

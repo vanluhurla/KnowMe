@@ -25,7 +25,7 @@ class KMDetailsViewModel: NSObject {
     
     init(configuration: KMGenericBottomSheetConfiguration) {
         self.configuration = configuration
- 
+        
     }
     
     func loadData() {

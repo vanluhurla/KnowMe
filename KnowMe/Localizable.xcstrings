@@ -45,6 +45,17 @@
         }
       }
     },
+    "journeyMainTitle" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "This is my journey..."
+          }
+        }
+      }
+    },
     "journeySecondTitle" : {
       "extractionState" : "manual",
       "localizations" : {
@@ -85,6 +96,17 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "I've witnessed the profound impact that mobile applications have had on improving people's lives, inspiring my desire to be a part of this transformative industry. \n\nI'm dedicated to crafting solutions and collaborating effectively within teams.\n\niOS stands out as my platform of expertise, given my existing familiarity with it from a user's perspective, interfaces, and design. \n\nMy goal is clear: to become an iOS Developer and continue contributing to this positive change in people's lives."
+          }
+        }
+      }
+    },
+    "personalProjects" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Some personal projects:"
           }
         }
       }

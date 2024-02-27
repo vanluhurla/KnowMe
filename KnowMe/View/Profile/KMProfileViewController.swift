@@ -65,14 +65,14 @@ class KMProfileViewController: UIViewController {
     }
 }
 
-    //MARK: Delegate
+//MARK: Delegate
 extension KMProfileViewController: KMProfileViewModelDelegate {
     func didRecieveProfileDetails() {
         applySnapshot()
     }
 }
 
-    //MARK: Collection View UI
+//MARK: Collection View UI
 extension KMProfileViewController {
     func setupUI() {
         setupViews()
@@ -103,7 +103,7 @@ extension KMProfileViewController {
     }
 }
 
-    //MARK: Cells
+//MARK: Cells
 private extension KMProfileViewController {
     func profileAnimation(collectionView: UICollectionView, indexPaht: IndexPath, item: ProfileAnimationItem) -> UICollectionViewCell {
         guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: KMProfileAnimationCell.identifier, for: indexPaht) as? KMProfileAnimationCell else {

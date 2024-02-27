@@ -1,15 +1,15 @@
 //
-//  KMProfileHeader.swift
+//  KMJourneyHeader.swift
 //  KnowMe
 //
-//  Created by Vanessa Hurla on 18/12/2023.
+//  Created by Vanessa Hurla on 27/02/2024.
 //
 
 import UIKit
 
-class KMProfileHeader: UICollectionReusableView {
+class KMJourneyHeader: UICollectionReusableView {
     
-    static var identifier = "ReusableKMProfileHeader"
+    static var identifier = "ReusableKMJourneyHeader"
     
     private var headerCellView: UIView = {
         let view =  UIView()
@@ -25,7 +25,7 @@ class KMProfileHeader: UICollectionReusableView {
         stackView.translatesAutoresizingMaskIntoConstraints = false
         return stackView
     }()
-    private var profileHeaderTitleLabel: UILabel = {
+    private var journeyHeaderTitleLabel: UILabel = {
         let header = UILabel()
         header.font = UIFont.systemFont(ofSize: 25, weight: .bold)
         header.textColor = .mainText
@@ -38,9 +38,9 @@ class KMProfileHeader: UICollectionReusableView {
     }
 }
 
-private extension KMProfileHeader {
+private extension KMJourneyHeader {
     func setupValues(title: String) {
-        profileHeaderTitleLabel.text = title
+        journeyHeaderTitleLabel.text = title
     }
     
     func setupUI() {
@@ -51,7 +51,7 @@ private extension KMProfileHeader {
     func setupViews() {
         addSubview(headerCellView)
         headerCellView.addSubview(headerCellStackView)
-        headerCellStackView.addArrangedSubview(profileHeaderTitleLabel)
+        headerCellStackView.addArrangedSubview(journeyHeaderTitleLabel)
     }
     
     func layoutViews() {
@@ -68,6 +68,3 @@ private extension KMProfileHeader {
         ])
     }
 }
-
-
-

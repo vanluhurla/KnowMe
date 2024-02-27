@@ -29,6 +29,7 @@
 		03C5EF452B7E7EF300D229A8 /* hello.json in Resources */ = {isa = PBXBuildFile; fileRef = 03C5EF442B7E7EF300D229A8 /* hello.json */; };
 		03C5EF472B83A3B400D229A8 /* KMJourneyCardCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03C5EF462B83A3B400D229A8 /* KMJourneyCardCell.swift */; };
 		03C5EF492B83B18600D229A8 /* KMJourneyStringKeys.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03C5EF482B83B18600D229A8 /* KMJourneyStringKeys.swift */; };
+		03C5EFAB2B8DFE4800D229A8 /* KMJourneyHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03C5EFAA2B8DFE4800D229A8 /* KMJourneyHeader.swift */; };
 		03D1390D2B27447B00248EB6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03D1390C2B27447B00248EB6 /* AppDelegate.swift */; };
 		03D1390F2B27447B00248EB6 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03D1390E2B27447B00248EB6 /* SceneDelegate.swift */; };
 		03D139162B27447D00248EB6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 03D139152B27447D00248EB6 /* Assets.xcassets */; };
@@ -95,6 +96,7 @@
 		03C5EF442B7E7EF300D229A8 /* hello.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = hello.json; sourceTree = "<group>"; };
 		03C5EF462B83A3B400D229A8 /* KMJourneyCardCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KMJourneyCardCell.swift; sourceTree = "<group>"; };
 		03C5EF482B83B18600D229A8 /* KMJourneyStringKeys.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KMJourneyStringKeys.swift; sourceTree = "<group>"; };
+		03C5EFAA2B8DFE4800D229A8 /* KMJourneyHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KMJourneyHeader.swift; sourceTree = "<group>"; };
 		03D139092B27447B00248EB6 /* KnowMe.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = KnowMe.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		03D1390C2B27447B00248EB6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		03D1390E2B27447B00248EB6 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -191,6 +193,7 @@
 		03C5EF392B7E381F00D229A8 /* Cells */ = {
 			isa = PBXGroup;
 			children = (
+				03C5EFAA2B8DFE4800D229A8 /* KMJourneyHeader.swift */,
 				03C5EF3A2B7E551600D229A8 /* KMJourneyAnimationCell.swift */,
 				03C5EF462B83A3B400D229A8 /* KMJourneyCardCell.swift */,
 			);
@@ -496,6 +499,7 @@
 				03D139412B274AAA00248EB6 /* KMViewControllerFactory.swift in Sources */,
 				03BD94822B63C90900700C34 /* KMDetailsViewModel.swift in Sources */,
 				03D139582B27573B00248EB6 /* KMProfileViewController.swift in Sources */,
+				03C5EFAB2B8DFE4800D229A8 /* KMJourneyHeader.swift in Sources */,
 				03D1390D2B27447B00248EB6 /* AppDelegate.swift in Sources */,
 				03D1395E2B27578000248EB6 /* KMJourneyViewModel.swift in Sources */,
 				03D1395C2B27576600248EB6 /* KMJourneyViewController.swift in Sources */,

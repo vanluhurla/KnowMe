@@ -62,7 +62,7 @@ extension KMProfileViewModel {
         switch type {
         case .personal:
             return KMGenericBottomSheetConfiguration(text: configuration.details.personalInfo,
-                                                     animation: configuration.details.personalInfoIcon, 
+                                                     animation: configuration.details.personalInfoIcon,
                                                      type: type)
         case .professional:
             return KMGenericBottomSheetConfiguration(text: configuration.details.professionalInfo,

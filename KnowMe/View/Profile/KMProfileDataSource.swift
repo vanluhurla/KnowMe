@@ -19,9 +19,9 @@ enum ProfileSection: Int, CaseIterable {
     var sectionTitle: String {
         switch self {
         case .animation:
-            return KMProfileStringKeys.firstTitle.localised
+            return KMProfileStringKeys.helloTitle.localised
         case .personalInfo:
-            return KMProfileStringKeys.secondTitle.localised
+            return KMProfileStringKeys.aboutTitle.localised
         case .professionalInfo:
             return ""
         }
