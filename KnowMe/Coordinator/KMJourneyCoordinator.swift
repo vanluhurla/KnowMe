@@ -18,7 +18,7 @@ class KMJourneyCoordinator {
     }
     
     func start() {
-        navigationController.pushViewController(viewFactory.journeyViewController(), animated: false)
+        navigationController.pushViewController(viewFactory.journeyViewController(coordinator: self), animated: false)
         setupTab()
     }
     
@@ -26,5 +26,12 @@ class KMJourneyCoordinator {
         navigationController.tabBarItem = UITabBarItem(title: tab.title,
                                                        image: tab.icon,
                                                        tag: tab.rawValue)
+    }
+}
+
+extension KMJourneyCoordinator: KMJourneyViewModelCoordinator {
+    func presentJourneyDetails(with configuration: KMJourneyDetailsViewModelConfiguration) {
+        let viewController = viewFactory.journeyDetailsViewController(configuration: configuration)
+        navigationController.pushViewController(viewController, animated: true)
     }
 }

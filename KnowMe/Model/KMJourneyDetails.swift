@@ -7,15 +7,24 @@
 
 import UIKit
 
+struct CardContent {
+    let image: String
+    let title: String
+    let content: String
+}
+
 struct KMJourneyDetails {
     let animation: String = "journey-main"
-    let firstCardImage: String = "good-chef"
-    let secondCardImage: String = "our-recipes"
-    let thirdCardImage: String = "todays-notes"
-    let firstCardTitle = KMJourneyStringKeys.goodchefCardTitle.localised
-    let secondCardTitle = KMJourneyStringKeys.ourrecipesCardTitle.localised
-    let thirdCardTitle = KMJourneyStringKeys.todaynotesCardTitle.localised
-    let firstCardContent = KMJourneyStringKeys.goodchefCardContent.localised
-    let secondCardContent = KMJourneyStringKeys.ourrecipesCardContent.localised
-    let thirdCardContent = KMJourneyStringKeys.todaynotesCardContent.localised
+    let cards: [CardContent] = [
+        CardContent(image: "good-chef",
+                    title: KMJourneyStringKeys.goodchefCardTitle.localised,
+                    content: KMJourneyStringKeys.goodchefCardContent.localised),
+        CardContent(image: "our-recipes",
+                    title: KMJourneyStringKeys.ourrecipesCardTitle.localised,
+                    content: KMJourneyStringKeys.ourrecipesCardTitle.localised),
+        CardContent(image: "todays-notes",
+                    title: KMJourneyStringKeys.todaynotesCardTitle.localised,
+                    content: KMJourneyStringKeys.todaynotesCardTitle.localised)
+    ]
 }
+
