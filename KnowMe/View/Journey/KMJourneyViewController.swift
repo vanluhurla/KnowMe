@@ -58,6 +58,7 @@ class KMJourneyViewController: UIViewController {
         super.viewDidLoad()
         view.backgroundColor = .backgroundPrimary
         viewModel.loadData()
+        setupCollectionView()
         setupUI()
     }
 }
@@ -68,6 +69,10 @@ extension KMJourneyViewController: KMJourneyViewModelDelegate {
 }
 
 extension KMJourneyViewController {
+    func setupCollectionView() {
+        collectionView.delegate = self
+    }
+    
     func setupUI() {
         setupView()
         layoutView()
@@ -90,11 +95,14 @@ extension KMJourneyViewController {
         var snapshot = KMJourneySnapshot()
         snapshot.appendSections(JourneySection.allCases)
         snapshot.appendItems(viewModel.buildAnimationItem(), toSection: JourneySection.animation)
-        snapshot.appendItems(viewModel.buildGoodchefCardItem(), toSection: JourneySection.card)
-        snapshot.appendItems(viewModel.buildOurrecipesCardItem(), toSection: JourneySection.card)
-        snapshot.appendItems(viewModel.buildTodaysnotesCardItem(), toSection: JourneySection.card)
-        
+        snapshot.appendItems(viewModel.buildCards(), toSection: JourneySection.card)
         dataSource.apply(snapshot)
+    }
+}
+
+extension KMJourneyViewController: UICollectionViewDelegate {
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        viewModel.didSelectItem(indexPath: indexPath)
     }
 }
 

@@ -11,6 +11,10 @@ struct KMJourneyViewModelConfiguration {
     let details = KMJourneyDetails()
 }
 
+protocol KMJourneyViewModelCoordinator: AnyObject {
+    func presentJourneyDetails(with configuration: KMJourneyDetailsViewModelConfiguration)
+}
+
 protocol KMJourneyViewModelDelegate: AnyObject {
     func didReceiveJourneyDetails()
 }
@@ -18,8 +22,25 @@ protocol KMJourneyViewModelDelegate: AnyObject {
 class KMJourneyViewModel: NSObject {
     
     weak var delegate: KMJourneyViewModelDelegate?
+    weak var coordinator: KMJourneyViewModelCoordinator?
     
     private var configuration = KMJourneyViewModelConfiguration()
+    
+    init(coordinator: KMJourneyViewModelCoordinator) {
+        self.coordinator = coordinator
+    }
+    
+    func didSelectItem(indexPath: IndexPath) {
+        guard let selectedSection = JourneySection(rawValue: indexPath.section) else {
+            return
+        }
+        switch selectedSection {
+        case .animation:
+            return
+        case .card:
+            return handleSelectedCard(indexPath: indexPath)
+        }
+    }
     
     func loadData() {
         delegate?.didReceiveJourneyDetails()
@@ -33,21 +54,20 @@ extension KMJourneyViewModel {
         return [item]
     }
     
-    func buildGoodchefCardItem() -> [JourneyItem] {
-        let cardItem = JourneyCard(image: configuration.details.firstCardImage, title: configuration.details.firstCardTitle)
-        let item = JourneyItem.card(cardItem)
-        return [item]
-    }
-    
-    func buildOurrecipesCardItem() -> [JourneyItem] {
-        let cardItem = JourneyCard(image: configuration.details.secondCardImage, title: configuration.details.secondCardTitle)
-        let item = JourneyItem.card(cardItem)
-        return [item]
-    }
-    
-    func buildTodaysnotesCardItem() -> [JourneyItem] {
-        let cardItem = JourneyCard(image: configuration.details.thirdCardImage, title: configuration.details.thirdCardTitle)
-        let item = JourneyItem.card(cardItem)
-        return [item]
+    func buildCards() -> [JourneyItem] {
+        configuration.details.cards.map { content in
+            let cardItem = JourneyCard(image: content.image,
+                                       title: content.title)
+            return JourneyItem.card(cardItem)
+        }
     }
 }
+
+private extension KMJourneyViewModel {
+    func handleSelectedCard(indexPath: IndexPath) {
+        let selectedCard = configuration.details.cards[indexPath.row]
+        let configuration = KMJourneyDetailsViewModelConfiguration(content: selectedCard)
+        coordinator?.presentJourneyDetails(with: configuration)
+    }
+}
+

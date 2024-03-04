@@ -15,8 +15,8 @@ class KMViewControllerFactory {
         return viewController
     }
     
-    func journeyViewController() -> UIViewController {
-        let viewModel = KMJourneyViewModel()
+    func journeyViewController(coordinator: KMJourneyViewModelCoordinator) -> UIViewController {
+        let viewModel = KMJourneyViewModel(coordinator: coordinator)
         let viewController = KMJourneyViewController(viewModel: viewModel)
         return viewController
     }
@@ -48,6 +48,12 @@ class KMViewControllerFactory {
             sheet.detents = [.medium(), .large()]
         }
         return navController
+    }
+    
+    func journeyDetailsViewController (configuration: KMJourneyDetailsViewModelConfiguration) -> UIViewController {
+        let viewModel = KMJourneyDetailsViewModel(configuration: configuration)
+        let journeyDetailsViewController = vKMJourneyDetailsViewController(viewModel: viewModel)
+        return journeyDetailsViewController
     }
 }
 
