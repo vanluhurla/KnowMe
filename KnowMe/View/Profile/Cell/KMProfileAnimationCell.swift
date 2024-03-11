@@ -12,15 +12,12 @@ class KMProfileAnimationCell: UICollectionViewCell {
     
     static var identifier = "ReusableKMProfileAnimationCell"
     
-    private var profileMainAnimation = LottieAnimationView()
-    
-    private var profileAnimationView: UIView = {
-        let view = UIView()
-        view.autoresizingMask = [.flexibleWidth]
-        view.translatesAutoresizingMaskIntoConstraints = false
-        view.backgroundColor = .clear
-        view.layer.masksToBounds = true
-        return view
+    private var profileMainAnimation: LottieAnimationView = {
+        let animationView = LottieAnimationView()
+        animationView.loopMode = .loop
+        animationView.animationSpeed = 1
+        animationView.translatesAutoresizingMaskIntoConstraints = false
+        return animationView
     }()
     
     override init(frame: CGRect) {
@@ -39,7 +36,7 @@ class KMProfileAnimationCell: UICollectionViewCell {
 
 private extension KMProfileAnimationCell {
     func setupValues() {
-        profileMainAnimation = .init(name: "hello")
+        profileMainAnimation.animation = LottieAnimation.named("hello")
     }
     
     func setupUI() {
@@ -49,27 +46,20 @@ private extension KMProfileAnimationCell {
     }
     
     func setupAnimation() {
-        profileMainAnimation.frame = contentView.bounds
         profileMainAnimation.play()
-        profileMainAnimation.loopMode = .loop
+        
     }
     
     func setupViews() {
-        contentView.addSubview(profileAnimationView)
-        profileAnimationView.addSubview(profileMainAnimation)
+        contentView.addSubview(profileMainAnimation)
     }
     
     func layoutViews() {
         NSLayoutConstraint.activate([
-            profileAnimationView.leadingAnchor.constraint(equalTo: contentView.leadingAnchor),
-            profileAnimationView.trailingAnchor.constraint(equalTo: contentView.trailingAnchor),
-            profileAnimationView.topAnchor.constraint(equalTo: contentView.topAnchor),
-            profileAnimationView.bottomAnchor.constraint(equalTo: contentView.bottomAnchor),
-            
-            profileMainAnimation.leadingAnchor.constraint(equalTo: profileAnimationView.leadingAnchor),
-            profileMainAnimation.trailingAnchor.constraint(equalTo: profileAnimationView.trailingAnchor),
-            profileMainAnimation.topAnchor.constraint(equalTo: profileAnimationView.topAnchor),
-            profileMainAnimation.bottomAnchor.constraint(equalTo: profileAnimationView.bottomAnchor)
+            profileMainAnimation.widthAnchor.constraint(equalToConstant: 400),
+            profileMainAnimation.heightAnchor.constraint(equalToConstant: 400),
+            profileMainAnimation.centerXAnchor.constraint(equalTo: contentView.centerXAnchor),
+            profileMainAnimation.topAnchor.constraint(equalTo: contentView.topAnchor, constant: -50)
         ])
     }
 }

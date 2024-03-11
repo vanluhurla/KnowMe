@@ -23,7 +23,6 @@ class KMJourneyCardCell: UICollectionViewCell {
     private var mainStackView: UIStackView = {
         let stackView = UIStackView()
         stackView.axis = .vertical
-        stackView.spacing = 6
         stackView.translatesAutoresizingMaskIntoConstraints = false
         return stackView
     }()
@@ -33,12 +32,13 @@ class KMJourneyCardCell: UICollectionViewCell {
         imageView.clipsToBounds = true
         imageView.layer.cornerRadius = 10
         imageView.layer.masksToBounds = true
+        imageView.alpha = 0.7
         imageView.translatesAutoresizingMaskIntoConstraints = false
         return imageView
     }()
     private var footerView: UIView = {
         let view = UIView()
-        view.backgroundColor = .white
+        view.backgroundColor = .clear
         view.translatesAutoresizingMaskIntoConstraints = false
         return view
     }()
@@ -53,6 +53,7 @@ class KMJourneyCardCell: UICollectionViewCell {
     }()
     private var titleLabel: UILabel = {
         let label = UILabel()
+        label.textColor = .black
         label.font = UIFont.systemFont(ofSize: 20, weight: .semibold)
         return label
     }()
@@ -116,8 +117,7 @@ private extension KMJourneyCardCell {
             
             textStackView.leadingAnchor.constraint(equalTo: footerView.leadingAnchor),
             textStackView.trailingAnchor.constraint(equalTo: footerView.trailingAnchor),
-            textStackView.topAnchor.constraint(equalTo: footerView.topAnchor),
-            textStackView.bottomAnchor.constraint(equalTo: footerView.bottomAnchor)
+            textStackView.topAnchor.constraint(equalTo: footerView.topAnchor)
         ])
     }
 }

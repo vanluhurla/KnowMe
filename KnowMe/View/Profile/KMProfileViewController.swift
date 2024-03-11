@@ -15,11 +15,16 @@ class KMProfileViewController: UIViewController {
         collectionView.backgroundColor = .clear
         collectionView.translatesAutoresizingMaskIntoConstraints = false
         collectionView.contentInset = UIEdgeInsets(top: 10, left: 0, bottom: 10, right: 0)
-        collectionView.register(KMProfileAnimationCell.self, forCellWithReuseIdentifier: KMProfileAnimationCell.identifier)
-        collectionView.register(KMProfileHeader.self, forSupplementaryViewOfKind: UICollectionView.elementKindSectionHeader, withReuseIdentifier: KMProfileHeader.identifier)
-        collectionView.register(KMProfileContentCell.self, forCellWithReuseIdentifier: KMProfileContentCell.identifier)
+        collectionView.register(KMProfileContentCell.self,
+                                forCellWithReuseIdentifier: KMProfileContentCell.identifier)
+        collectionView.register(KMProfileAnimationCell.self,
+                                forCellWithReuseIdentifier: KMProfileAnimationCell.identifier)
+        collectionView.register(KMProfileHeader.self, 
+                                forSupplementaryViewOfKind: UICollectionView.elementKindSectionHeader,
+                                withReuseIdentifier: KMProfileHeader.identifier)
         return collectionView
     }()
+    
     //MARK: Data Source
     private lazy var dataSource: KMProfileDataSource = {
         let dataSource = KMProfileDataSource(collectionView: collectionView) { [weak self] collectionView, indexPath, itemIdentifier in

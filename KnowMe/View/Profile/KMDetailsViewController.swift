@@ -70,7 +70,7 @@ extension KMDetailsViewController: KMGenericBottomSheetDelegate {
 extension KMDetailsViewController {
     func setupUI() {
         setupViews()
-        setupLayout()
+        layoutViews()
         stackViewIndentation()
         setupAnimation()
     }
@@ -87,7 +87,7 @@ extension KMDetailsViewController {
         mainStackView.addArrangedSubview(detailsTextLabel)
     }
     
-    func setupLayout() {
+    func layoutViews() {
         NSLayoutConstraint.activate([
             mainStackView.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 16),
             mainStackView.trailingAnchor.constraint(equalTo: view.trailingAnchor),

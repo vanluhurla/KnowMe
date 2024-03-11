@@ -18,15 +18,15 @@
 		03BC8DBB2B2C6F29000D09F6 /* KMProfileDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03BC8DBA2B2C6F29000D09F6 /* KMProfileDataSource.swift */; };
 		03BD947F2B482A7B00700C34 /* KMColours.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03BD947E2B482A7B00700C34 /* KMColours.swift */; };
 		03BD94822B63C90900700C34 /* KMDetailsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03BD94812B63C90900700C34 /* KMDetailsViewModel.swift */; };
+		03BE78692B973306005A93EE /* hello.json in Resources */ = {isa = PBXBuildFile; fileRef = 03BE78682B973306005A93EE /* hello.json */; };
+		03BE786D2B976349005A93EE /* journey-main.json in Resources */ = {isa = PBXBuildFile; fileRef = 03BE786C2B976349005A93EE /* journey-main.json */; };
 		03C5EF2A2B7CE8EC00D229A8 /* Lottie in Frameworks */ = {isa = PBXBuildFile; productRef = 03C5EF292B7CE8EC00D229A8 /* Lottie */; };
 		03C5EF362B7E264400D229A8 /* personal-animation.json in Resources */ = {isa = PBXBuildFile; fileRef = 03C5EF352B7E264400D229A8 /* personal-animation.json */; };
 		03C5EF382B7E26CF00D229A8 /* professional-animation.json in Resources */ = {isa = PBXBuildFile; fileRef = 03C5EF372B7E26CF00D229A8 /* professional-animation.json */; };
 		03C5EF3B2B7E551600D229A8 /* KMJourneyAnimationCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03C5EF3A2B7E551600D229A8 /* KMJourneyAnimationCell.swift */; };
-		03C5EF3D2B7E5C1400D229A8 /* journey-main.json in Resources */ = {isa = PBXBuildFile; fileRef = 03C5EF3C2B7E5C1400D229A8 /* journey-main.json */; };
 		03C5EF3F2B7E61E900D229A8 /* KMJourneyCollectionViewLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03C5EF3E2B7E61E900D229A8 /* KMJourneyCollectionViewLayout.swift */; };
 		03C5EF412B7E651B00D229A8 /* KMJourneyDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03C5EF402B7E651B00D229A8 /* KMJourneyDataSource.swift */; };
 		03C5EF432B7E75E600D229A8 /* KMJourneyDetails.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03C5EF422B7E75E600D229A8 /* KMJourneyDetails.swift */; };
-		03C5EF452B7E7EF300D229A8 /* hello.json in Resources */ = {isa = PBXBuildFile; fileRef = 03C5EF442B7E7EF300D229A8 /* hello.json */; };
 		03C5EF472B83A3B400D229A8 /* KMJourneyCardCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03C5EF462B83A3B400D229A8 /* KMJourneyCardCell.swift */; };
 		03C5EF492B83B18600D229A8 /* KMJourneyStringKeys.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03C5EF482B83B18600D229A8 /* KMJourneyStringKeys.swift */; };
 		03C5EFAB2B8DFE4800D229A8 /* KMJourneyHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03C5EFAA2B8DFE4800D229A8 /* KMJourneyHeader.swift */; };
@@ -88,14 +88,14 @@
 		03BC8DBA2B2C6F29000D09F6 /* KMProfileDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KMProfileDataSource.swift; sourceTree = "<group>"; };
 		03BD947E2B482A7B00700C34 /* KMColours.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KMColours.swift; sourceTree = "<group>"; };
 		03BD94812B63C90900700C34 /* KMDetailsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KMDetailsViewModel.swift; sourceTree = "<group>"; };
+		03BE78682B973306005A93EE /* hello.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = hello.json; sourceTree = "<group>"; };
+		03BE786C2B976349005A93EE /* journey-main.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "journey-main.json"; sourceTree = "<group>"; };
 		03C5EF352B7E264400D229A8 /* personal-animation.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "personal-animation.json"; sourceTree = "<group>"; };
 		03C5EF372B7E26CF00D229A8 /* professional-animation.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "professional-animation.json"; sourceTree = "<group>"; };
 		03C5EF3A2B7E551600D229A8 /* KMJourneyAnimationCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KMJourneyAnimationCell.swift; sourceTree = "<group>"; };
-		03C5EF3C2B7E5C1400D229A8 /* journey-main.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "journey-main.json"; sourceTree = "<group>"; };
 		03C5EF3E2B7E61E900D229A8 /* KMJourneyCollectionViewLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KMJourneyCollectionViewLayout.swift; sourceTree = "<group>"; };
 		03C5EF402B7E651B00D229A8 /* KMJourneyDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KMJourneyDataSource.swift; sourceTree = "<group>"; };
 		03C5EF422B7E75E600D229A8 /* KMJourneyDetails.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KMJourneyDetails.swift; sourceTree = "<group>"; };
-		03C5EF442B7E7EF300D229A8 /* hello.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = hello.json; sourceTree = "<group>"; };
 		03C5EF462B83A3B400D229A8 /* KMJourneyCardCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KMJourneyCardCell.swift; sourceTree = "<group>"; };
 		03C5EF482B83B18600D229A8 /* KMJourneyStringKeys.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KMJourneyStringKeys.swift; sourceTree = "<group>"; };
 		03C5EFAA2B8DFE4800D229A8 /* KMJourneyHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KMJourneyHeader.swift; sourceTree = "<group>"; };
@@ -237,8 +237,8 @@
 				03D139152B27447D00248EB6 /* Assets.xcassets */,
 				03C5EF352B7E264400D229A8 /* personal-animation.json */,
 				03C5EF372B7E26CF00D229A8 /* professional-animation.json */,
-				03C5EF3C2B7E5C1400D229A8 /* journey-main.json */,
-				03C5EF442B7E7EF300D229A8 /* hello.json */,
+				03BE78682B973306005A93EE /* hello.json */,
+				03BE786C2B976349005A93EE /* journey-main.json */,
 				03D139172B27447D00248EB6 /* LaunchScreen.storyboard */,
 				03D1391A2B27447D00248EB6 /* Info.plist */,
 				030F61DA2B309EEA00911E8D /* Localizable.xcstrings */,
@@ -472,9 +472,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				03C5EF362B7E264400D229A8 /* personal-animation.json in Resources */,
-				03C5EF3D2B7E5C1400D229A8 /* journey-main.json in Resources */,
-				03C5EF452B7E7EF300D229A8 /* hello.json in Resources */,
+				03BE78692B973306005A93EE /* hello.json in Resources */,
 				03D139192B27447D00248EB6 /* LaunchScreen.storyboard in Resources */,
+				03BE786D2B976349005A93EE /* journey-main.json in Resources */,
 				03D139162B27447D00248EB6 /* Assets.xcassets in Resources */,
 				03C5EF382B7E26CF00D229A8 /* professional-animation.json in Resources */,
 				030F61DB2B309EEA00911E8D /* Localizable.xcstrings in Resources */,

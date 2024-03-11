@@ -19,7 +19,7 @@ enum ProfileSection: Int, CaseIterable {
     var sectionTitle: String {
         switch self {
         case .animation:
-            return KMProfileStringKeys.helloTitle.localised
+            return ""
         case .personalInfo:
             return KMProfileStringKeys.aboutTitle.localised
         case .professionalInfo:
