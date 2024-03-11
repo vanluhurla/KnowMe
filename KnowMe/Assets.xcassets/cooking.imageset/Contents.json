@@ -1,15 +1,17 @@
 {
   "images" : [
     {
-      "filename" : "IMG_3010.heic",
+      "filename" : "cooking.png",
       "idiom" : "universal",
       "scale" : "1x"
     },
     {
+      "filename" : "cooking@2x.png",
       "idiom" : "universal",
       "scale" : "2x"
     },
     {
+      "filename" : "cooking@3x.png",
       "idiom" : "universal",
       "scale" : "3x"
     }

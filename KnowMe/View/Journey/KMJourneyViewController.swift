@@ -14,7 +14,7 @@ class KMJourneyViewController: UIViewController {
         let collectionView = UICollectionView(frame: .zero, collectionViewLayout: layout)
         collectionView.backgroundColor = .clear
         collectionView.translatesAutoresizingMaskIntoConstraints = false
-        collectionView.contentInset = UIEdgeInsets(top: 10, left: 0, bottom: 10, right: 0)
+        collectionView.contentInset = UIEdgeInsets(top: 10, left: 0, bottom: 0, right: 0)
         collectionView.register(KMJourneyAnimationCell.self, forCellWithReuseIdentifier: KMJourneyAnimationCell.identifier)
         collectionView.register(KMJourneyCardCell.self, forCellWithReuseIdentifier: KMJourneyCardCell.identifier)
         collectionView.register(KMJourneyHeader.self, forSupplementaryViewOfKind: UICollectionView.elementKindSectionHeader, withReuseIdentifier: KMJourneyHeader.identifier)

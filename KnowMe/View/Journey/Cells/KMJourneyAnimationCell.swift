@@ -14,8 +14,9 @@ class KMJourneyAnimationCell: UICollectionViewCell {
     
     private var animationView: LottieAnimationView = {
         let animationView = LottieAnimationView()
-        animationView.alpha = 0.6
         animationView.loopMode = .loop
+        animationView.animationSpeed = 0.5
+        animationView.alpha = 0.6
         animationView.translatesAutoresizingMaskIntoConstraints = false
         return animationView
     }()
@@ -55,10 +56,10 @@ extension KMJourneyAnimationCell {
     
     func layoutViews() {
         NSLayoutConstraint.activate([
-            
             animationView.widthAnchor.constraint(equalToConstant: 300),
             animationView.heightAnchor.constraint(equalToConstant: 300),
-            animationView.centerXAnchor.constraint(equalTo: contentView.centerXAnchor)
+            animationView.centerXAnchor.constraint(equalTo: contentView.centerXAnchor),
+            animationView.topAnchor.constraint(equalTo: contentView.topAnchor, constant: -30)
         ])
     }
 }

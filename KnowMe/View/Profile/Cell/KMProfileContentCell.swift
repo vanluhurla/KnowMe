@@ -43,14 +43,14 @@ class KMProfileContentCell: UICollectionViewCell {
         label.textAlignment = .natural
         return label
     }()
-    private var profileTextCellButton: UIButton = {
-        let button = UIButton()
-        button.translatesAutoresizingMaskIntoConstraints = false
-        button.setTitle("Read more", for: .normal)
-        button.titleLabel?.font = .systemFont(ofSize: 14, weight: .bold)
-        button.contentHorizontalAlignment = .right
-        button.backgroundColor = .clear
-        return button
+    private var readmoreTextLabel: UILabel = {
+        let label = UILabel()
+        label.font = UIFont.systemFont(ofSize: 14, weight: .regular)
+        label.text = "Read more..."
+        label.textColor = .personalIconColour
+        label.numberOfLines = 0
+        label.textAlignment = .right
+        return label
     }()
     private var textStackView: UIStackView = {
         let stackView = UIStackView()
@@ -82,7 +82,7 @@ class KMProfileContentCell: UICollectionViewCell {
 private extension KMProfileContentCell {
     func setupValues(item: ProfileContent) {
         profileTextLabel.text = item.info
-        profileTextCellButton.addTarget(self, action: #selector(didTapReadMeButton), for: .touchUpInside)
+//        profileTextCellButton.addTarget(self, action: #selector(didTapReadMeButton), for: .touchUpInside)
     }
     
     func setupUI() {
@@ -112,7 +112,7 @@ private extension KMProfileContentCell {
         contentView.addSubview(detailsTextViewCell)
         detailsTextViewCell.addSubview(mainStackView)
         mainStackView.addArrangedSubview(textStackView)
-        mainStackView.addArrangedSubview(profileTextCellButton)
+        mainStackView.addArrangedSubview(readmoreTextLabel)
         textStackView.addArrangedSubview(iconImageView)
         textStackView.addArrangedSubview(profileTextLabel)
     }
@@ -135,11 +135,7 @@ private extension KMProfileContentCell {
             
             iconImageView.leadingAnchor.constraint(equalTo: textStackView.leadingAnchor, constant: 0),
             iconImageView.widthAnchor.constraint(equalToConstant: 45),
-            iconImageView.heightAnchor.constraint(equalToConstant: 45),
-            
-            profileTextCellButton.leadingAnchor.constraint(equalTo: mainStackView.leadingAnchor, constant: 16),
-            profileTextCellButton.trailingAnchor.constraint(equalTo: mainStackView.trailingAnchor, constant: -16),
-            profileTextCellButton.bottomAnchor.constraint(equalTo: mainStackView.bottomAnchor, constant: 16)
+            iconImageView.heightAnchor.constraint(equalToConstant: 45)
         ])
     }
     

@@ -17,7 +17,7 @@ enum JourneySection: Int, CaseIterable {
     var sectionTitle: String {
         switch self {
         case .animation:
-            return KMJourneyStringKeys.journeyMainTitle.localised
+            return ""
         case .card:
             return KMJourneyStringKeys.personalProjectsTitle.localised
         }

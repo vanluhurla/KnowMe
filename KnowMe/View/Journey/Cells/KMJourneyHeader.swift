@@ -20,7 +20,6 @@ class KMJourneyHeader: UICollectionReusableView {
     private var headerCellStackView: UIStackView = {
         let stackView = UIStackView()
         stackView.axis = .horizontal
-        stackView.spacing = 2.0
         stackView.backgroundColor = .clear
         stackView.translatesAutoresizingMaskIntoConstraints = false
         return stackView

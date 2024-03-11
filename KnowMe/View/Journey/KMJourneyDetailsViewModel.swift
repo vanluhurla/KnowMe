@@ -12,7 +12,7 @@ struct KMJourneyDetailsViewModelConfiguration {
 }
 
 protocol KMJourneyDetailsViewModelDelegate: AnyObject {
-    func didReceiveContent()
+    func didReceiveContent(content: CardContent)
 }
 
 class KMJourneyDetailsViewModel: NSObject {
@@ -26,6 +26,6 @@ class KMJourneyDetailsViewModel: NSObject {
     }
     
     func loadData() {
-        delegate?.didReceiveContent()
+        delegate?.didReceiveContent(content: configuration.content)
     }
 }
