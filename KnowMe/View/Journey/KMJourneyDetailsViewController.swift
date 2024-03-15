@@ -7,7 +7,7 @@
 
 import UIKit
 
-class vKMJourneyDetailsViewController: UIViewController {
+class KMJourneyDetailsViewController: UIViewController {
     
     
     private var mainScrollView: UIScrollView = {
@@ -59,14 +59,14 @@ class vKMJourneyDetailsViewController: UIViewController {
         setupUI()
     }
 }
-extension vKMJourneyDetailsViewController: KMJourneyDetailsViewModelDelegate {
+extension KMJourneyDetailsViewController: KMJourneyDetailsViewModelDelegate {
     func didReceiveContent(content: CardContent) {
         detailsTextLabel.text = content.content
         iconImageView.image = UIImage(named: content.icon)
     }
 }
 
-extension vKMJourneyDetailsViewController {
+extension KMJourneyDetailsViewController {
     func setupUI() {
         setupViews()
         layoutViews()
