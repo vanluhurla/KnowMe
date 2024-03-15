@@ -20,6 +20,14 @@
 		03BD94822B63C90900700C34 /* KMDetailsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03BD94812B63C90900700C34 /* KMDetailsViewModel.swift */; };
 		03BE78692B973306005A93EE /* hello.json in Resources */ = {isa = PBXBuildFile; fileRef = 03BE78682B973306005A93EE /* hello.json */; };
 		03BE786D2B976349005A93EE /* journey-main.json in Resources */ = {isa = PBXBuildFile; fileRef = 03BE786C2B976349005A93EE /* journey-main.json */; };
+		03BE78EA2B9F674C005A93EE /* KMEducationAnimationCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03BE78E92B9F674C005A93EE /* KMEducationAnimationCell.swift */; };
+		03BE78EC2BA1B65A005A93EE /* education.json in Resources */ = {isa = PBXBuildFile; fileRef = 03BE78EB2BA1B659005A93EE /* education.json */; };
+		03BE78EE2BA1B6A1005A93EE /* KMEducationCollectionViewLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03BE78ED2BA1B6A1005A93EE /* KMEducationCollectionViewLayout.swift */; };
+		03BE78F02BA1BFF6005A93EE /* KMEducationDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03BE78EF2BA1BFF6005A93EE /* KMEducationDataSource.swift */; };
+		03BE78F22BA1F066005A93EE /* KMEducationDetails.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03BE78F12BA1F066005A93EE /* KMEducationDetails.swift */; };
+		03BE78F42BA30B74005A93EE /* KMEducationDetailsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03BE78F32BA30B74005A93EE /* KMEducationDetailsViewModel.swift */; };
+		03BE78F62BA30B8C005A93EE /* KMEducationDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03BE78F52BA30B8C005A93EE /* KMEducationDetailsViewController.swift */; };
+		03BE78FE2BA4649E005A93EE /* KMEducationCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03BE78FD2BA4649E005A93EE /* KMEducationCell.swift */; };
 		03C5EF2A2B7CE8EC00D229A8 /* Lottie in Frameworks */ = {isa = PBXBuildFile; productRef = 03C5EF292B7CE8EC00D229A8 /* Lottie */; };
 		03C5EF362B7E264400D229A8 /* personal-animation.json in Resources */ = {isa = PBXBuildFile; fileRef = 03C5EF352B7E264400D229A8 /* personal-animation.json */; };
 		03C5EF382B7E26CF00D229A8 /* professional-animation.json in Resources */ = {isa = PBXBuildFile; fileRef = 03C5EF372B7E26CF00D229A8 /* professional-animation.json */; };
@@ -90,6 +98,14 @@
 		03BD94812B63C90900700C34 /* KMDetailsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KMDetailsViewModel.swift; sourceTree = "<group>"; };
 		03BE78682B973306005A93EE /* hello.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = hello.json; sourceTree = "<group>"; };
 		03BE786C2B976349005A93EE /* journey-main.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "journey-main.json"; sourceTree = "<group>"; };
+		03BE78E92B9F674C005A93EE /* KMEducationAnimationCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KMEducationAnimationCell.swift; sourceTree = "<group>"; };
+		03BE78EB2BA1B659005A93EE /* education.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = education.json; sourceTree = "<group>"; };
+		03BE78ED2BA1B6A1005A93EE /* KMEducationCollectionViewLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KMEducationCollectionViewLayout.swift; sourceTree = "<group>"; };
+		03BE78EF2BA1BFF6005A93EE /* KMEducationDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KMEducationDataSource.swift; sourceTree = "<group>"; };
+		03BE78F12BA1F066005A93EE /* KMEducationDetails.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KMEducationDetails.swift; sourceTree = "<group>"; };
+		03BE78F32BA30B74005A93EE /* KMEducationDetailsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KMEducationDetailsViewModel.swift; sourceTree = "<group>"; };
+		03BE78F52BA30B8C005A93EE /* KMEducationDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KMEducationDetailsViewController.swift; sourceTree = "<group>"; };
+		03BE78FD2BA4649E005A93EE /* KMEducationCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KMEducationCell.swift; sourceTree = "<group>"; };
 		03C5EF352B7E264400D229A8 /* personal-animation.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "personal-animation.json"; sourceTree = "<group>"; };
 		03C5EF372B7E26CF00D229A8 /* professional-animation.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "professional-animation.json"; sourceTree = "<group>"; };
 		03C5EF3A2B7E551600D229A8 /* KMJourneyAnimationCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KMJourneyAnimationCell.swift; sourceTree = "<group>"; };
@@ -163,6 +179,7 @@
 			children = (
 				030F61D62B2CB3FD00911E8D /* KMProfileDetails.swift */,
 				03C5EF422B7E75E600D229A8 /* KMJourneyDetails.swift */,
+				03BE78F12BA1F066005A93EE /* KMEducationDetails.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -192,6 +209,15 @@
 				03BD947E2B482A7B00700C34 /* KMColours.swift */,
 			);
 			path = Design;
+			sourceTree = "<group>";
+		};
+		03BE78E82B9F672E005A93EE /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				03BE78E92B9F674C005A93EE /* KMEducationAnimationCell.swift */,
+				03BE78FD2BA4649E005A93EE /* KMEducationCell.swift */,
+			);
+			path = Cell;
 			sourceTree = "<group>";
 		};
 		03C5EF392B7E381F00D229A8 /* Cells */ = {
@@ -239,6 +265,7 @@
 				03C5EF372B7E26CF00D229A8 /* professional-animation.json */,
 				03BE78682B973306005A93EE /* hello.json */,
 				03BE786C2B976349005A93EE /* journey-main.json */,
+				03BE78EB2BA1B659005A93EE /* education.json */,
 				03D139172B27447D00248EB6 /* LaunchScreen.storyboard */,
 				03D1391A2B27447D00248EB6 /* Info.plist */,
 				030F61DA2B309EEA00911E8D /* Localizable.xcstrings */,
@@ -337,8 +364,13 @@
 		03D139542B2756E900248EB6 /* Education */ = {
 			isa = PBXGroup;
 			children = (
+				03BE78E82B9F672E005A93EE /* Cell */,
+				03BE78EF2BA1BFF6005A93EE /* KMEducationDataSource.swift */,
+				03BE78ED2BA1B6A1005A93EE /* KMEducationCollectionViewLayout.swift */,
 				03D139612B27579E00248EB6 /* KMEducationViewModel.swift */,
 				03D1395F2B27579100248EB6 /* KMEducationViewController.swift */,
+				03BE78F32BA30B74005A93EE /* KMEducationDetailsViewModel.swift */,
+				03BE78F52BA30B8C005A93EE /* KMEducationDetailsViewController.swift */,
 			);
 			path = Education;
 			sourceTree = "<group>";
@@ -473,6 +505,7 @@
 			files = (
 				03C5EF362B7E264400D229A8 /* personal-animation.json in Resources */,
 				03BE78692B973306005A93EE /* hello.json in Resources */,
+				03BE78EC2BA1B65A005A93EE /* education.json in Resources */,
 				03D139192B27447D00248EB6 /* LaunchScreen.storyboard in Resources */,
 				03BE786D2B976349005A93EE /* journey-main.json in Resources */,
 				03D139162B27447D00248EB6 /* Assets.xcassets in Resources */,
@@ -515,14 +548,17 @@
 				03C5EFAD2B8E0A8800D229A8 /* KMJourneyDetailsViewModel.swift in Sources */,
 				030F61E12B30A5F800911E8D /* KMProfileStringKeys.swift in Sources */,
 				03C5EF412B7E651B00D229A8 /* KMJourneyDataSource.swift in Sources */,
+				03BE78EE2BA1B6A1005A93EE /* KMEducationCollectionViewLayout.swift in Sources */,
 				03C5EF492B83B18600D229A8 /* KMJourneyStringKeys.swift in Sources */,
 				03C5EF472B83A3B400D229A8 /* KMJourneyCardCell.swift in Sources */,
 				03D139492B27560100248EB6 /* KMProfileCoordinator.swift in Sources */,
 				03D139682B2757DC00248EB6 /* KMContactViewController.swift in Sources */,
+				03BE78F42BA30B74005A93EE /* KMEducationDetailsViewModel.swift in Sources */,
 				030F61D72B2CB3FD00911E8D /* KMProfileDetails.swift in Sources */,
 				03D1395A2B27575300248EB6 /* KMProfileViewModel.swift in Sources */,
 				03D1394F2B27564F00248EB6 /* KMSkillsCoordinator.swift in Sources */,
 				03D139472B274DD600248EB6 /* KMTabController.swift in Sources */,
+				03BE78EA2B9F674C005A93EE /* KMEducationAnimationCell.swift in Sources */,
 				03C5EF432B7E75E600D229A8 /* KMJourneyDetails.swift in Sources */,
 				03D139602B27579100248EB6 /* KMEducationViewController.swift in Sources */,
 				03D1394B2B27562200248EB6 /* KMJourneyCoordinator.swift in Sources */,
@@ -531,7 +567,10 @@
 				03C5EF3B2B7E551600D229A8 /* KMJourneyAnimationCell.swift in Sources */,
 				03BC8DBB2B2C6F29000D09F6 /* KMProfileDataSource.swift in Sources */,
 				03C5EFAF2B8E0A9C00D229A8 /* KMJourneyDetailsViewController.swift in Sources */,
+				03BE78FE2BA4649E005A93EE /* KMEducationCell.swift in Sources */,
+				03BE78F02BA1BFF6005A93EE /* KMEducationDataSource.swift in Sources */,
 				03BC8DB72B2C6649000D09F6 /* KMProfileAnimationCell.swift in Sources */,
+				03BE78F62BA30B8C005A93EE /* KMEducationDetailsViewController.swift in Sources */,
 				03D139512B27567200248EB6 /* KMHobbiesCoordinator.swift in Sources */,
 				030F61E72B31F46000911E8D /* KMProfileContentCell.swift in Sources */,
 				03D139662B2757CB00248EB6 /* KMSkillsViewModel.swift in Sources */,
@@ -540,6 +579,7 @@
 				03D1394D2B27563900248EB6 /* KMEducationCoordinator.swift in Sources */,
 				030F61E32B30B15E00911E8D /* KMProfileHeader.swift in Sources */,
 				03D1396A2B2757ED00248EB6 /* KMContactViewModel.swift in Sources */,
+				03BE78F22BA1F066005A93EE /* KMEducationDetails.swift in Sources */,
 				03C5EF3F2B7E61E900D229A8 /* KMJourneyCollectionViewLayout.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

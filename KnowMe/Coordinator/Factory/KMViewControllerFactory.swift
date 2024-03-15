@@ -21,8 +21,8 @@ class KMViewControllerFactory {
         return viewController
     }
     
-    func educationViewController() -> UIViewController {
-        let viewModel = KMEducationViewModel()
+    func educationViewController(coordinator: KMEducationViewModelCoordinator) -> UIViewController {
+        let viewModel = KMEducationViewModel(coordinator: coordinator)
         let viewController = KMEducationViewController(viewModel: viewModel)
         return viewController
     }
@@ -52,8 +52,14 @@ class KMViewControllerFactory {
     
     func journeyDetailsViewController (configuration: KMJourneyDetailsViewModelConfiguration) -> UIViewController {
         let viewModel = KMJourneyDetailsViewModel(configuration: configuration)
-        let journeyDetailsViewController = vKMJourneyDetailsViewController(viewModel: viewModel)
+        let journeyDetailsViewController = KMJourneyDetailsViewController(viewModel: viewModel)
         return journeyDetailsViewController
+    }
+    
+    func educationDetailsViewController (configuration: KMEducationDetailsViewModelConfiguration) -> UIViewController {
+        let viewModel = KMEducationDetailsViewModel(configuration: configuration)
+        let educationDetailsViewController = KMEducationDetailsViewController(viewModel: viewModel)
+        return educationDetailsViewController
     }
 }
 

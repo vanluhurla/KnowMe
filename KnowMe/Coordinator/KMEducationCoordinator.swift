@@ -18,7 +18,7 @@ class KMEducationCoordinator {
     }
     
     func start() {
-        navigationController.pushViewController(viewFactory.educationViewController(), animated: false)
+        navigationController.pushViewController(viewFactory.educationViewController(coordinator: self), animated: false)
         setupTab()
     }
     
@@ -27,4 +27,13 @@ class KMEducationCoordinator {
                                                        image: tab.icon,
                                                        tag: tab.rawValue)
     }
+}
+
+extension KMEducationCoordinator: KMEducationViewModelCoordinator {
+    func presentEducationDetails(with configuration: KMEducationDetailsViewModelConfiguration) {
+        let viewController = viewFactory.educationDetailsViewController(configuration: configuration)
+        navigationController.pushViewController(viewController, animated: true)
+    }
+    
+    
 }
