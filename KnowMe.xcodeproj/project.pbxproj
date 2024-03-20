@@ -25,8 +25,6 @@
 		03BE78EE2BA1B6A1005A93EE /* KMEducationCollectionViewLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03BE78ED2BA1B6A1005A93EE /* KMEducationCollectionViewLayout.swift */; };
 		03BE78F02BA1BFF6005A93EE /* KMEducationDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03BE78EF2BA1BFF6005A93EE /* KMEducationDataSource.swift */; };
 		03BE78F22BA1F066005A93EE /* KMEducationDetails.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03BE78F12BA1F066005A93EE /* KMEducationDetails.swift */; };
-		03BE78F42BA30B74005A93EE /* KMEducationDetailsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03BE78F32BA30B74005A93EE /* KMEducationDetailsViewModel.swift */; };
-		03BE78F62BA30B8C005A93EE /* KMEducationDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03BE78F52BA30B8C005A93EE /* KMEducationDetailsViewController.swift */; };
 		03BE78FE2BA4649E005A93EE /* KMEducationCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03BE78FD2BA4649E005A93EE /* KMEducationCell.swift */; };
 		03C5EF2A2B7CE8EC00D229A8 /* Lottie in Frameworks */ = {isa = PBXBuildFile; productRef = 03C5EF292B7CE8EC00D229A8 /* Lottie */; };
 		03C5EF362B7E264400D229A8 /* personal-animation.json in Resources */ = {isa = PBXBuildFile; fileRef = 03C5EF352B7E264400D229A8 /* personal-animation.json */; };
@@ -40,6 +38,7 @@
 		03C5EFAB2B8DFE4800D229A8 /* KMJourneyHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03C5EFAA2B8DFE4800D229A8 /* KMJourneyHeader.swift */; };
 		03C5EFAD2B8E0A8800D229A8 /* KMJourneyDetailsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03C5EFAC2B8E0A8800D229A8 /* KMJourneyDetailsViewModel.swift */; };
 		03C5EFAF2B8E0A9C00D229A8 /* KMJourneyDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03C5EFAE2B8E0A9C00D229A8 /* KMJourneyDetailsViewController.swift */; };
+		03CFD1E72BA886BB00720D71 /* KMEducationStringKeys.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03CFD1E62BA886BB00720D71 /* KMEducationStringKeys.swift */; };
 		03D1390D2B27447B00248EB6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03D1390C2B27447B00248EB6 /* AppDelegate.swift */; };
 		03D1390F2B27447B00248EB6 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03D1390E2B27447B00248EB6 /* SceneDelegate.swift */; };
 		03D139162B27447D00248EB6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 03D139152B27447D00248EB6 /* Assets.xcassets */; };
@@ -103,8 +102,6 @@
 		03BE78ED2BA1B6A1005A93EE /* KMEducationCollectionViewLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KMEducationCollectionViewLayout.swift; sourceTree = "<group>"; };
 		03BE78EF2BA1BFF6005A93EE /* KMEducationDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KMEducationDataSource.swift; sourceTree = "<group>"; };
 		03BE78F12BA1F066005A93EE /* KMEducationDetails.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KMEducationDetails.swift; sourceTree = "<group>"; };
-		03BE78F32BA30B74005A93EE /* KMEducationDetailsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KMEducationDetailsViewModel.swift; sourceTree = "<group>"; };
-		03BE78F52BA30B8C005A93EE /* KMEducationDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KMEducationDetailsViewController.swift; sourceTree = "<group>"; };
 		03BE78FD2BA4649E005A93EE /* KMEducationCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KMEducationCell.swift; sourceTree = "<group>"; };
 		03C5EF352B7E264400D229A8 /* personal-animation.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "personal-animation.json"; sourceTree = "<group>"; };
 		03C5EF372B7E26CF00D229A8 /* professional-animation.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "professional-animation.json"; sourceTree = "<group>"; };
@@ -117,6 +114,7 @@
 		03C5EFAA2B8DFE4800D229A8 /* KMJourneyHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KMJourneyHeader.swift; sourceTree = "<group>"; };
 		03C5EFAC2B8E0A8800D229A8 /* KMJourneyDetailsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KMJourneyDetailsViewModel.swift; sourceTree = "<group>"; };
 		03C5EFAE2B8E0A9C00D229A8 /* KMJourneyDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KMJourneyDetailsViewController.swift; sourceTree = "<group>"; };
+		03CFD1E62BA886BB00720D71 /* KMEducationStringKeys.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KMEducationStringKeys.swift; sourceTree = "<group>"; };
 		03D139092B27447B00248EB6 /* KnowMe.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = KnowMe.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		03D1390C2B27447B00248EB6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		03D1390E2B27447B00248EB6 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -189,6 +187,7 @@
 			children = (
 				030F61E02B30A5F800911E8D /* KMProfileStringKeys.swift */,
 				03C5EF482B83B18600D229A8 /* KMJourneyStringKeys.swift */,
+				03CFD1E62BA886BB00720D71 /* KMEducationStringKeys.swift */,
 			);
 			path = Content;
 			sourceTree = "<group>";
@@ -369,8 +368,6 @@
 				03BE78ED2BA1B6A1005A93EE /* KMEducationCollectionViewLayout.swift */,
 				03D139612B27579E00248EB6 /* KMEducationViewModel.swift */,
 				03D1395F2B27579100248EB6 /* KMEducationViewController.swift */,
-				03BE78F32BA30B74005A93EE /* KMEducationDetailsViewModel.swift */,
-				03BE78F52BA30B8C005A93EE /* KMEducationDetailsViewController.swift */,
 			);
 			path = Education;
 			sourceTree = "<group>";
@@ -539,6 +536,7 @@
 				03BD94822B63C90900700C34 /* KMDetailsViewModel.swift in Sources */,
 				03D139582B27573B00248EB6 /* KMProfileViewController.swift in Sources */,
 				03C5EFAB2B8DFE4800D229A8 /* KMJourneyHeader.swift in Sources */,
+				03CFD1E72BA886BB00720D71 /* KMEducationStringKeys.swift in Sources */,
 				03D1390D2B27447B00248EB6 /* AppDelegate.swift in Sources */,
 				03D1395E2B27578000248EB6 /* KMJourneyViewModel.swift in Sources */,
 				03D1395C2B27576600248EB6 /* KMJourneyViewController.swift in Sources */,
@@ -553,7 +551,6 @@
 				03C5EF472B83A3B400D229A8 /* KMJourneyCardCell.swift in Sources */,
 				03D139492B27560100248EB6 /* KMProfileCoordinator.swift in Sources */,
 				03D139682B2757DC00248EB6 /* KMContactViewController.swift in Sources */,
-				03BE78F42BA30B74005A93EE /* KMEducationDetailsViewModel.swift in Sources */,
 				030F61D72B2CB3FD00911E8D /* KMProfileDetails.swift in Sources */,
 				03D1395A2B27575300248EB6 /* KMProfileViewModel.swift in Sources */,
 				03D1394F2B27564F00248EB6 /* KMSkillsCoordinator.swift in Sources */,
@@ -570,7 +567,6 @@
 				03BE78FE2BA4649E005A93EE /* KMEducationCell.swift in Sources */,
 				03BE78F02BA1BFF6005A93EE /* KMEducationDataSource.swift in Sources */,
 				03BC8DB72B2C6649000D09F6 /* KMProfileAnimationCell.swift in Sources */,
-				03BE78F62BA30B8C005A93EE /* KMEducationDetailsViewController.swift in Sources */,
 				03D139512B27567200248EB6 /* KMHobbiesCoordinator.swift in Sources */,
 				030F61E72B31F46000911E8D /* KMProfileContentCell.swift in Sources */,
 				03D139662B2757CB00248EB6 /* KMSkillsViewModel.swift in Sources */,

@@ -12,6 +12,28 @@
         }
       }
     },
+    "fundLogicCourseCont" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Fundação Bradesco, London March 2023"
+          }
+        }
+      }
+    },
+    "fundLogicCourseTitle" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Fundamentals of Programming Logic Course"
+          }
+        }
+      }
+    },
     "goodChef" : {
       "extractionState" : "manual",
       "localizations" : {
@@ -30,6 +52,94 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Hi, I'm Vanessa!"
+          }
+        }
+      }
+    },
+    "iosArchitecCourseCont" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "LinkedIn, London March 2023"
+          }
+        }
+      }
+    },
+    "iosArchitecCourseTitle" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "iOS Development: Architecture"
+          }
+        }
+      }
+    },
+    "iosDevMoocCourseCont" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Code First Girls, London October 2023 "
+          }
+        }
+      }
+    },
+    "iosDevMoocCourseTitle" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "iOS Development MOOC Sprint"
+          }
+        }
+      }
+    },
+    "iosEssencialCourseCont" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "LinkedIn, London March 2023"
+          }
+        }
+      }
+    },
+    "iosEssencialCourseTitle" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "iOS 16 Development Essential Training"
+          }
+        }
+      }
+    },
+    "iosSwiftCourseCont" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Udemy, London July 2023 — January 2024 "
+          }
+        }
+      }
+    },
+    "iosSwiftCourseTitle" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "iOS & Swift - The Complete iOS App Development Bootcamp"
           }
         }
       }
@@ -129,6 +239,72 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "TodaysNotes is a straightforward note-taking app, developed using Swift MVC \narchitecture. It offers a user-friendly interface for creating and deleting notes with ease. \n\nMy contribution and learning process: \n* Navigation and Presentation: I contributed to the navigation flow by implementing a function, which allows users to view and edit note details. This function utilises storyboards for view controller instantiation and navigation.  \n* Data Management: I actively participated in managing notes using the NoteManager class. This class handles note storage, retrieval, deletion, and replacement, making it a crucial component of the app's data management.  \n* User Defaults Usage and Note Editing View: I learned to use UserDefaults for storing and retrieving notes, enabling persistent data storage and I worked on the NoteDetailsViewController, which allows users to create and edit notes. This view controller includes text view placeholders, dynamic text view resizing, and efficient note saving and updating.  \n* Other things I learned about: Protocols, UIViewController Setup, UITableView Implementation, Custom UITableViewCel, Delegate Implementation, User Interface Enhancement and Structs. "
+          }
+        }
+      }
+    },
+    "uniDescriptionCont" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Universidade Paulista (UNIP), São Paulo  February 2011 — December 2012 "
+          }
+        }
+      }
+    },
+    "uniDescriptionTitle" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Marketing Technologist"
+          }
+        }
+      }
+    },
+    "uxBeginnerCourseCont" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Interaction Design Foundation, London June 2021"
+          }
+        }
+      }
+    },
+    "uxBeginnerCourseTitle" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "User Experience: The Beginner's Guide"
+          }
+        }
+      }
+    },
+    "webDevCourseCont" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Code First Girls, London March 2023 — April 2023 "
+          }
+        }
+      }
+    },
+    "webDevCourseTitle" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Wed Development"
           }
         }
       }

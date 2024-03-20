@@ -16,6 +16,7 @@ class KMEducationViewController: UIViewController {
         collectionView.translatesAutoresizingMaskIntoConstraints = false
         collectionView.contentInset = UIEdgeInsets(top: 10, left: 0, bottom: 0, right: 0)
         collectionView.register(KMEducationAnimationCell.self, forCellWithReuseIdentifier: KMEducationAnimationCell.identifier)
+        collectionView.register(KMEducationCell.self, forCellWithReuseIdentifier: KMEducationCell.identifier)
         return collectionView
     }()
     
@@ -27,8 +28,8 @@ class KMEducationViewController: UIViewController {
             switch itemIdentifier {
             case .animation(let item):
                 return educationAnimation(collectionView: collectionView, indexPath: indexPath, item: item)
-            case .card(_):
-                return nil
+            case .cell(let item):
+                return educationCell(collectionView: collectionView, indexPath: indexPath, item: item)
             }
         }
         return dataSource
@@ -48,7 +49,7 @@ class KMEducationViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        view.backgroundColor = .backgroundPrimary
+        view.backgroundColor = .white
         viewModel.loadData()
         setupUI()
         
@@ -83,6 +84,7 @@ extension KMEducationViewController {
         var snapshot = KMEducationSnapshot()
         snapshot.appendSections(EducationSection.allCases)
         snapshot.appendItems(viewModel.buildAnimationItem(), toSection: EducationSection.animation)
+        snapshot.appendItems(viewModel.buildCells(), toSection: EducationSection.cell)
         dataSource.apply(snapshot)
     }
 }
@@ -94,5 +96,14 @@ extension KMEducationViewController {
         }
         cell.setupCellContent()
         return cell
+    }
+    
+    func educationCell(collectionView: UICollectionView, indexPath: IndexPath, item: EducationCellItem) -> UICollectionViewCell {
+        guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: KMEducationCell.identifier, for: indexPath) as? KMEducationCell else {
+            return UICollectionViewCell()
+        }
+        cell.setupCellContent(item: item)
+        return cell
+        
     }
 }

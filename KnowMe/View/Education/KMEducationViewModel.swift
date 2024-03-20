@@ -12,7 +12,6 @@ struct KMEducationViewModelConfiguration {
 }
 
 protocol KMEducationViewModelCoordinator: AnyObject {
-    func presentEducationDetails(with configuration: KMEducationDetailsViewModelConfiguration)
 }
 
 protocol KMEducationViewModelDelegate: AnyObject {
@@ -41,5 +40,13 @@ extension KMEducationViewModel {
         let animationItem = EducationAnimationItem(animation: configuration.details.animation)
         let item = EducationItem.animation(animationItem)
         return [item]
+    }
+    
+    func buildCells() -> [EducationItem] {
+        configuration.details.cells.map { content in
+            let cellItem = EducationCellItem(icon: content.icon, title: content.title,
+                                             content: content.content)
+            return EducationItem.cell(cellItem)
+        }
     }
 }

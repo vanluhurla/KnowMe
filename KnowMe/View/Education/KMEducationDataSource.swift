@@ -12,20 +12,21 @@ typealias KMEducationSnapshot = NSDiffableDataSourceSnapshot<EducationSection, E
 
 
 enum EducationSection: Int, CaseIterable {
-    case animation, card
+    case animation, cell
 }
 
 enum EducationItem: Hashable {
     case animation(EducationAnimationItem)
-    case card(EducationCardItem)
+    case cell(EducationCellItem)
 }
 
 struct EducationAnimationItem: Hashable {
     let animation: String
 }
 
-struct EducationCardItem: Hashable {
+struct EducationCellItem: Hashable {
     let icon: String
     let title: String
+    let content: String
 }
 
