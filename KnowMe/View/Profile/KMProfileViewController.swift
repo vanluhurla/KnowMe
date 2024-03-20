@@ -67,6 +67,7 @@ class KMProfileViewController: UIViewController {
         view.backgroundColor = .backgroundPrimary
         viewModel.loadData()
         setupUI()
+        collectionView.delegate = self
     }
 }
 
@@ -134,6 +135,19 @@ private extension KMProfileViewController {
         cell.setupCellContent(item: item)
         cell.delegate = self
         return cell
+    }
+}
+
+extension KMProfileViewController: UICollectionViewDelegate {
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        switch ProfileSection(rawValue: indexPath.section) {
+        case .personalInfo:
+            viewModel.didTapReadMeButton(type: .personal)
+        case .professionalInfo:
+            viewModel.didTapReadMeButton(type: .professional)
+        default:
+            return
+        }
     }
 }
 

@@ -30,10 +30,4 @@ class KMEducationCoordinator {
 }
 
 extension KMEducationCoordinator: KMEducationViewModelCoordinator {
-    func presentEducationDetails(with configuration: KMEducationDetailsViewModelConfiguration) {
-        let viewController = viewFactory.educationDetailsViewController(configuration: configuration)
-        navigationController.pushViewController(viewController, animated: true)
-    }
-    
-    
 }

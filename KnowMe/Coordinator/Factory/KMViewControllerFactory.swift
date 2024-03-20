@@ -55,12 +55,6 @@ class KMViewControllerFactory {
         let journeyDetailsViewController = KMJourneyDetailsViewController(viewModel: viewModel)
         return journeyDetailsViewController
     }
-    
-    func educationDetailsViewController (configuration: KMEducationDetailsViewModelConfiguration) -> UIViewController {
-        let viewModel = KMEducationDetailsViewModel(configuration: configuration)
-        let educationDetailsViewController = KMEducationDetailsViewController(viewModel: viewModel)
-        return educationDetailsViewController
-    }
 }
 
 

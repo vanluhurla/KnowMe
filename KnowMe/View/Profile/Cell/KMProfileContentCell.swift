@@ -82,7 +82,6 @@ class KMProfileContentCell: UICollectionViewCell {
 private extension KMProfileContentCell {
     func setupValues(item: ProfileContent) {
         profileTextLabel.text = item.info
-//        profileTextCellButton.addTarget(self, action: #selector(didTapReadMeButton), for: .touchUpInside)
     }
     
     func setupUI() {
@@ -153,13 +152,6 @@ private extension KMProfileContentCell {
                                                                          leading: 16,
                                                                          bottom: 0,
                                                                          trailing: 16)
-    }
-    
-    @objc func didTapReadMeButton() {
-        guard let contentType else {
-            return
-        }
-        delegate?.didTapReadMoreButton(type: contentType)
     }
 }
 
