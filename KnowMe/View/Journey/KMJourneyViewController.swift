@@ -57,6 +57,7 @@ class KMJourneyViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = .backgroundPrimary
+        navigationItem.title = "Journey"
         viewModel.loadData()
         setupCollectionView()
         setupUI()

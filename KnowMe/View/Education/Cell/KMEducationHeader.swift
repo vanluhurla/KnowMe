@@ -1,18 +1,18 @@
 //
-//  KMJourneyHeader.swift
+//  KMEducationHeader.swift
 //  KnowMe
 //
-//  Created by Vanessa Hurla on 27/02/2024.
+//  Created by Vanessa Hurla on 26/03/2024.
 //
 
 import UIKit
 
-class KMJourneyHeader: UICollectionReusableView {
+class KMEducationHeader: UICollectionReusableView {
     
-    static var identifier = "ReusableKMJourneyHeader"
+    static var identifier = "ReusableKMEducationHeader"
     
     private var headerCellView: UIView = {
-        let view =  UIView()
+        let view = UIView()
         view.translatesAutoresizingMaskIntoConstraints = false
         view.backgroundColor = .clear
         return view
@@ -24,11 +24,11 @@ class KMJourneyHeader: UICollectionReusableView {
         stackView.translatesAutoresizingMaskIntoConstraints = false
         return stackView
     }()
-    private var journeyHeaderTitleLabel: UILabel = {
-        let header = UILabel()
-        header.font = UIFont.systemFont(ofSize: 22, weight: .semibold)
-        header.textColor = .mainText
-        return header
+    private var educationHeaderTitleLabel: UILabel = {
+        let label = UILabel()
+        label.font = UIFont.systemFont(ofSize: 22, weight: .semibold)
+        label.textColor = .mainText
+        return label
     }()
     
     func setupHeader(title: String) {
@@ -37,9 +37,9 @@ class KMJourneyHeader: UICollectionReusableView {
     }
 }
 
-private extension KMJourneyHeader {
+private extension KMEducationHeader {
     func setupValues(title: String) {
-        journeyHeaderTitleLabel.text = title
+        educationHeaderTitleLabel.text = title
     }
     
     func setupUI() {
@@ -50,7 +50,7 @@ private extension KMJourneyHeader {
     func setupViews() {
         addSubview(headerCellView)
         headerCellView.addSubview(headerCellStackView)
-        headerCellStackView.addArrangedSubview(journeyHeaderTitleLabel)
+        headerCellStackView.addArrangedSubview(educationHeaderTitleLabel)
     }
     
     func layoutViews() {

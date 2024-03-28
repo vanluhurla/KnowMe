@@ -17,6 +17,8 @@ class KMEducationViewController: UIViewController {
         collectionView.contentInset = UIEdgeInsets(top: 10, left: 0, bottom: 0, right: 0)
         collectionView.register(KMEducationAnimationCell.self, forCellWithReuseIdentifier: KMEducationAnimationCell.identifier)
         collectionView.register(KMEducationCell.self, forCellWithReuseIdentifier: KMEducationCell.identifier)
+        collectionView.register(KMEducationHeader.self, forSupplementaryViewOfKind: UICollectionView.elementKindSectionHeader, 
+                                withReuseIdentifier: KMEducationHeader.identifier)
         return collectionView
     }()
     
@@ -31,6 +33,12 @@ class KMEducationViewController: UIViewController {
             case .cell(let item):
                 return educationCell(collectionView: collectionView, indexPath: indexPath, item: item)
             }
+        }
+        dataSource.supplementaryViewProvider = { [weak self] collectionView, kind, indexPath in
+            guard let self else {
+                return nil
+            }
+            return header(collectionView: collectionView, kind: kind, indexPath: indexPath)
         }
         return dataSource
     }()
@@ -49,7 +57,8 @@ class KMEducationViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        view.backgroundColor = .white
+        view.backgroundColor = .backgroundPrimary
+        navigationItem.title = "Education"
         viewModel.loadData()
         setupUI()
         
@@ -62,6 +71,10 @@ extension KMEducationViewController: KMEducationViewModelDelegate {
 }
 
 extension KMEducationViewController {
+    func updateCellHeight() {
+        collectionView.performBatchUpdates(nil, completion: nil)
+    }
+    
     func setupUI() {
         setupViews()
         layoutViews()
@@ -90,6 +103,15 @@ extension KMEducationViewController {
 }
 
 extension KMEducationViewController {
+    func header(collectionView: UICollectionView, kind: String, indexPath: IndexPath) -> UICollectionReusableView? {
+        guard let sectionHeader = collectionView.dequeueReusableSupplementaryView(ofKind: kind, withReuseIdentifier: KMEducationHeader.identifier, for: indexPath) as? KMEducationHeader,
+              let section = EducationSection(rawValue: indexPath.section) else {
+            return nil
+        }
+        sectionHeader.setupHeader(title: section.sectionTitle)
+        return sectionHeader
+    }
+    
     func educationAnimation(collectionView: UICollectionView, indexPath: IndexPath, item: EducationAnimationItem) -> UICollectionViewCell {
         guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: KMEducationAnimationCell.identifier, for: indexPath) as? KMEducationAnimationCell else {
             return UICollectionViewCell()
@@ -103,7 +125,14 @@ extension KMEducationViewController {
             return UICollectionViewCell()
         }
         cell.setupCellContent(item: item)
+        cell.delegate = self
         return cell
         
+    }
+}
+
+extension KMEducationViewController: KMEducationCellDelegate {
+    func didChangeSize() {
+        collectionView.collectionViewLayout.invalidateLayout()
     }
 }

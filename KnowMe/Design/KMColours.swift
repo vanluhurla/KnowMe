@@ -15,6 +15,9 @@ extension UIColor {
     static let personalIcon = UIColor(named: "personalIconColour")
     static let backgroundProfessionalCell = UIColor(named: "professionalCellColour")
     static let professionalIcon = UIColor(named: "professionalIconColour")
+    static let educationCellColour = UIColor(named: "eduCellColour")
+    static let educationCellText = UIColor(named: "eduCellText")
+    static let profileSecView = UIColor(named: "profileBackSecundary")
 }
 
 

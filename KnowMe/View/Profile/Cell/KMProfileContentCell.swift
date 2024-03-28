@@ -25,6 +25,7 @@ class KMProfileContentCell: UICollectionViewCell {
         stackView.axis = .vertical
         stackView.backgroundColor = .clear
         stackView.layer.cornerRadius = 15
+        stackView.spacing = 15
         stackView.translatesAutoresizingMaskIntoConstraints = false
         return stackView
     }()

@@ -16,7 +16,6 @@ class KMEducationAnimationCell: UICollectionViewCell {
         let animationView = LottieAnimationView()
         animationView.loopMode = .loop
         animationView.animationSpeed = 0.5
-        animationView.alpha = 0.6
         animationView.translatesAutoresizingMaskIntoConstraints = false
         return animationView
     }()
