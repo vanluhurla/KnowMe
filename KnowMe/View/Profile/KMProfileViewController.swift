@@ -24,6 +24,13 @@ class KMProfileViewController: UIViewController {
                                 withReuseIdentifier: KMProfileHeader.identifier)
         return collectionView
     }()
+//    private var backgroundView: UIView = {
+//        let view = UIView()
+//        view.backgroundColor = .profileBackSecundary
+//        view.layer.cornerRadius = 15
+//        view.translatesAutoresizingMaskIntoConstraints = false
+//        return view
+//    }()
     
     //MARK: Data Source
     private lazy var dataSource: KMProfileDataSource = {
@@ -68,6 +75,7 @@ class KMProfileViewController: UIViewController {
         viewModel.loadData()
         setupUI()
         collectionView.delegate = self
+        navigationItem.title = "Profile"
     }
 }
 
@@ -86,6 +94,7 @@ extension KMProfileViewController {
     }
     
     func setupViews() {
+//        view.addSubview(backgroundView)
         view.addSubview(collectionView)
     }
     
@@ -94,7 +103,12 @@ extension KMProfileViewController {
             collectionView.topAnchor.constraint(equalTo: view.topAnchor),
             collectionView.leftAnchor.constraint(equalTo: view.leftAnchor),
             collectionView.bottomAnchor.constraint(equalTo: view.bottomAnchor),
-            collectionView.rightAnchor.constraint(equalTo: view.rightAnchor)
+            collectionView.rightAnchor.constraint(equalTo: view.rightAnchor),
+            
+//            backgroundView.leadingAnchor.constraint(equalTo: view.leadingAnchor),
+//            backgroundView.trailingAnchor.constraint(equalTo: view.trailingAnchor),
+//            backgroundView.bottomAnchor.constraint(equalTo: view.bottomAnchor),
+//            backgroundView.heightAnchor.constraint(equalTo: view.heightAnchor, multiplier: 0.53)
         ])
     }
     

@@ -26,7 +26,7 @@ class KMProfileHeader: UICollectionReusableView {
     }()
     private var profileHeaderTitleLabel: UILabel = {
         let header = UILabel()
-        header.font = UIFont.systemFont(ofSize: 25, weight: .bold)
+        header.font = UIFont.systemFont(ofSize: 22, weight: .semibold)
         header.textColor = .mainText
         return header
     }()

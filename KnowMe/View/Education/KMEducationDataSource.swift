@@ -13,6 +13,15 @@ typealias KMEducationSnapshot = NSDiffableDataSourceSnapshot<EducationSection, E
 
 enum EducationSection: Int, CaseIterable {
     case animation, cell
+    
+    var sectionTitle: String {
+        switch self {
+        case .animation:
+            return ""
+        case .cell:
+            return "My study journey:"
+        }
+    }
 }
 
 enum EducationItem: Hashable {

@@ -64,6 +64,7 @@
 		03D139662B2757CB00248EB6 /* KMSkillsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03D139652B2757CB00248EB6 /* KMSkillsViewModel.swift */; };
 		03D139682B2757DC00248EB6 /* KMContactViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03D139672B2757DC00248EB6 /* KMContactViewController.swift */; };
 		03D1396A2B2757ED00248EB6 /* KMContactViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03D139692B2757ED00248EB6 /* KMContactViewModel.swift */; };
+		03E6C4AC2BB2EE8A00033C87 /* KMEducationHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03E6C4AB2BB2EE8A00033C87 /* KMEducationHeader.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -144,6 +145,7 @@
 		03D139652B2757CB00248EB6 /* KMSkillsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KMSkillsViewModel.swift; sourceTree = "<group>"; };
 		03D139672B2757DC00248EB6 /* KMContactViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KMContactViewController.swift; sourceTree = "<group>"; };
 		03D139692B2757ED00248EB6 /* KMContactViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KMContactViewModel.swift; sourceTree = "<group>"; };
+		03E6C4AB2BB2EE8A00033C87 /* KMEducationHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KMEducationHeader.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -213,6 +215,7 @@
 		03BE78E82B9F672E005A93EE /* Cell */ = {
 			isa = PBXGroup;
 			children = (
+				03E6C4AB2BB2EE8A00033C87 /* KMEducationHeader.swift */,
 				03BE78E92B9F674C005A93EE /* KMEducationAnimationCell.swift */,
 				03BE78FD2BA4649E005A93EE /* KMEducationCell.swift */,
 			);
@@ -567,6 +570,7 @@
 				03BE78FE2BA4649E005A93EE /* KMEducationCell.swift in Sources */,
 				03BE78F02BA1BFF6005A93EE /* KMEducationDataSource.swift in Sources */,
 				03BC8DB72B2C6649000D09F6 /* KMProfileAnimationCell.swift in Sources */,
+				03E6C4AC2BB2EE8A00033C87 /* KMEducationHeader.swift in Sources */,
 				03D139512B27567200248EB6 /* KMHobbiesCoordinator.swift in Sources */,
 				030F61E72B31F46000911E8D /* KMProfileContentCell.swift in Sources */,
 				03D139662B2757CB00248EB6 /* KMSkillsViewModel.swift in Sources */,

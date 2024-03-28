@@ -35,7 +35,7 @@ class KMJourneyDetailsViewController: UIViewController {
         label.font = UIFont.systemFont(ofSize: 18, weight: .regular)
         label.numberOfLines = 0
         label.backgroundColor = .clear
-        label.textColor = .black
+        label.textColor = .mainText
         label.textAlignment = .natural
         return label
     }()

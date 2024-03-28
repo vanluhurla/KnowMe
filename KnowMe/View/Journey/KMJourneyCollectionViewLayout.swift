@@ -52,16 +52,16 @@ private extension KMJourneyCollectionViewLayout {
         
         section.orthogonalScrollingBehavior = .groupPaging
         
-        let footerHeaderSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(1.0), heightDimension: .estimated(10.0))
+        let footerHeaderSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(1.0), heightDimension: .estimated(100))
         let header = NSCollectionLayoutBoundarySupplementaryItem(
             layoutSize: footerHeaderSize,
             elementKind: UICollectionView.elementKindSectionHeader,
             alignment: .top)
-        header.contentInsets = NSDirectionalEdgeInsets(top: 0, leading: 0, bottom: 40, trailing: 10)
+        header.contentInsets = NSDirectionalEdgeInsets(top: 0, leading: 0, bottom: 0, trailing: 10)
        
         section.boundarySupplementaryItems = [header]
         section.interGroupSpacing = 10
-        section.contentInsets = NSDirectionalEdgeInsets(top: 30, leading: 10, bottom: 5, trailing: 10)
+        section.contentInsets = NSDirectionalEdgeInsets(top: 15, leading: 10, bottom: 5, trailing: 10)
         
         return section
     }

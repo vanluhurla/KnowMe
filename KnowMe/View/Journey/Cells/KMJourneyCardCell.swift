@@ -32,7 +32,6 @@ class KMJourneyCardCell: UICollectionViewCell {
         imageView.clipsToBounds = true
         imageView.layer.cornerRadius = 10
         imageView.layer.masksToBounds = true
-        imageView.alpha = 0.7
         imageView.translatesAutoresizingMaskIntoConstraints = false
         return imageView
     }()
@@ -46,15 +45,15 @@ class KMJourneyCardCell: UICollectionViewCell {
         let stackView = UIStackView()
         stackView.axis = .vertical
         stackView.alignment = .leading
-        stackView.layoutMargins = UIEdgeInsets(top: 16, left: 16, bottom: 16, right: 16)
+        stackView.layoutMargins = UIEdgeInsets(top: 14, left: 0, bottom: 16, right: 16)
         stackView.isLayoutMarginsRelativeArrangement = true
         stackView.translatesAutoresizingMaskIntoConstraints = false
         return stackView
     }()
     private var titleLabel: UILabel = {
         let label = UILabel()
-        label.textColor = .black
-        label.font = UIFont.systemFont(ofSize: 20, weight: .semibold)
+        label.textColor = .mainText
+        label.font = UIFont.systemFont(ofSize: 18, weight: .regular)
         return label
     }()
     
